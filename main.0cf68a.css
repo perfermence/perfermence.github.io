@@ -803,16 +803,16 @@ body {
 }
 
 .left-col #header a {
-  color: #696969
+  color: #48423b
 }
 
 .left-col #header a:hover {
-  color: #b0a0aa
+  color: #3e21b0
 }
 
 .left-col #header .header-subtitle {
   text-align: center;
-  color: #999;
+  color: #ea1696;
   font-size: 14px;
   line-height: 25px;
   overflow: hidden;
