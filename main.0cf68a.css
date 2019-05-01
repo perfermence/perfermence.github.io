@@ -759,8 +759,8 @@ body {
   position: absolute;
   right: 0;
   min-height: 100%;
-  background: url("./img/四叶草.jpg") no-repeat 0 0;
-  background-size:contain;
+  background: url("./img/向日葵.png") no-repeat 0 0;
+  background-size:100% 100%;
   left: 300px;
   width: auto
 }
