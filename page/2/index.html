@@ -61,9 +61,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/archives">归档</a></li>
 	        
-				<li><a href="/categories/index.html">分类</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -149,9 +149,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/index.html">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -168,19 +168,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-postName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-正则基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/postName/">浅谈javascript中的数据类型</a>
+      <a class="article-title" href="/2019/04/30/正则基础/">强大的正则</a>
     </h1>
   
 
         
-        <a href="/2019/04/30/postName/" class="archive-article-date">
+        <a href="/2019/04/30/正则基础/" class="archive-article-date">
   	<time datetime="2019-04-30T10:47:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
 </a>
         
@@ -188,46 +188,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="JS中的数据类型（重点）"><a href="#JS中的数据类型（重点）" class="headerlink" title="JS中的数据类型（重点）"></a>JS中的数据类型（重点）</h3><blockquote>
-<ul>
-<li>基本数据类型（值类型）<ul>
-<li>number:数字</li>
-<li>string:字符串</li>
-<li>boolean:布尔</li>
-<li>null：空对象指针</li>
-<li>undefined:未定义</li>
-</ul>
-</li>
-<li>引用数据类型<ul>
-<li>object 对象数据类型<ul>
-<li>{}普通对象</li>
-<li>[]数组</li>
-<li>/^$/正则</li>
-<li>…</li>
-</ul>
-</li>
-<li>function 函数数据类型</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span> <span class="number">12.5</span> <span class="number">-12.5</span> <span class="number">0</span></span><br><span class="line"><span class="string">'fhjf'</span> <span class="string">"祝福"</span> =&gt;单双引号包裹起来的都是字符串（单双引号没有区别）</span><br><span class="line"><span class="literal">true</span> <span class="literal">false</span>=&gt; 布尔类型：只有两个值;</span><br><span class="line"><span class="literal">null</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">&#123;<span class="attr">name</span>:<span class="string">'dfd'</span>,<span class="string">'dfdf'</span>&#125;</span><br><span class="line">[<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>]</span><br><span class="line">/^-?(\d|([<span class="number">1</span><span class="number">-9</span>]\d+))(\.\d+)?$/</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>这么多数据类型JS如何去检测？(背)</p>
-<ul>
-<li>typepof: 检测数据类型的运算符</li>
-<li>instanceof: 检测某个实例是否属于这个类</li>
-<li>constructor: 获取当前实例的构造器</li>
-<li>Object.prototype.toString.call: 获取当前实例的所属类信息</li>
-</ul>
-<p><strong>typeof</strong></p>
+        <p>###正则</p>
 <blockquote>
-<p>使用typeof检测，返回的结果是一个字符串，字符串中包含的内容证明了值是属于什么类型的</p>
-<p>[局限性]<br>1.typeof null 不是’null’而是’object’ : 因为Null虽然是单独的一个数据类型，但是它原本意思是空对象指针，浏览器使用typeof检测的时候会把它按照对象来检测<br>2.使用typeof 无法具体细分出到底是数组还是正则，因为返回的结果都是’object’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;  =&gt;<span class="string">"number"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">13</span>;</span><br><span class="line"><span class="keyword">typeof</span> num;=&gt;<span class="string">"number"</span> <span class="comment">//实际检测的是13的数据类型，num 无意义</span></span><br></pre></td></tr></table></figure></p>
+<p>是一个用来处理字符串的规则（加分项，好好学正则）</p>
+<ul>
+<li>只能用来处理字符串</li>
+<li>处理包含：<ul>
+<li>A：验证当前字符串是否符合某个规则“正则匹配”</li>
+<li>B：把一个字符串中符合规则的字符获取到“正则捕获”</li>
+</ul>
+</li>
+</ul>
+<p>学习正则其实就是在学习如何编写规则<br>每一个正则都是由“元字符”、“修饰符”两部分组成</p>
 </blockquote>
-<p><img src="./1550739939224.png" alt="Alt text"><br><img src="./1550740266812.png" alt="Alt text"></p>
-<p>腾讯面试题：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="keyword">typeof</span> []);=&gt;<span class="string">"string"</span></span><br><span class="line"><span class="keyword">typeof</span> [] -&gt;<span class="string">"object"</span>   <span class="comment">//因为typeof返回的值就是一个字符串</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">"object"</span> -&gt;<span class="string">"string"</span> <span class="comment">//检测的类型是字符串</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;1、创建正则的两种方式</span><br><span class="line">let reg1=/^\d+$/g; //=&gt;字面量方式</span><br><span class="line">let reg=new RegExp(&quot;^\\d+$&quot;,&quot;g&quot;);//=&gt;构造函数方式</span><br><span class="line"></span><br><span class="line">//=&gt;2、正则两个斜杠之间包起来的都是“元字符”，斜杠后面出现的都是“修饰符”</span><br></pre></td></tr></table></figure>
+<p><code>常用修饰符</code><br>i : ignoreCase  忽略大小写匹配<br>m：multiline  多行匹配<br>g ：global   全局匹配</p>
+<p><code>常用元字符</code></p>
+<blockquote>
+<p>[特殊元字符]</p>
+<ul>
+<li><code>\d</code>  0~9之间的一个数字</li>
+<li><code>\D</code> 非0~9之间的任意字符</li>
+<li><code>\w</code> “数字、字母、下划线”中任意一个</li>
+<li><code>\s</code> 匹配任意一个空白字符（包括\t制表符[TAB键四个空格]）</li>
+<li><code>\b</code> 匹配边界符   例如：’zhu’ (z左边和u右边就是边界)</li>
+<li><code>\n</code> 匹配一个换行符</li>
+<li><code>\</code> 转义字符（把一个普通字符转义为特殊的字符，例如：\d，把有特殊含义的转换为普通意思；.此处的点就不是任意字符，而是一个小数点）</li>
+<li><code>.</code> 不仅仅是小数点，代表除了\n以为的任意字符</li>
+<li><code>^</code> 以某个元字符开头</li>
+<li><code>$</code> 以某个元字符结尾</li>
+<li><code>|</code>  例如：x|y  x或者y中的任意一个</li>
+<li><code>[]</code> 每一项中的任意一个 例如：[xyz] XYZ中任意一个</li>
+<li><code>[^]</code> 非</li>
+<li><code>[a-z]</code> 获取A-中任意一个字符（[0-9] 等价于\d）</li>
+<li><code>[^a-z]</code> 除了a-z的任意字符</li>
+<li><code>()</code> 正则分组</li>
+<li><code>(?:)</code> 当前分组只匹配不捕获</li>
+<li><code>(?=)</code>正向预查</li>
+<li><code>(?!)</code> 负向预查</li>
+</ul>
+</blockquote>
         
-          <a class="article-more-a" href="/2019/04/30/postName/#more">more >></a>
+          <a class="article-more-a" href="/2019/04/30/正则基础/#more">more >></a>
         
       
 
@@ -242,6 +244,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">RegExp</a>
         		</li>
       		
 		</ul>
@@ -262,7 +268,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/30/postName/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/30/正则基础/">展开全文 >></a>
         </p>
       
 
@@ -493,15 +499,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
