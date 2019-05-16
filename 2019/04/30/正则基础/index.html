@@ -16,25 +16,10 @@
 <meta property="og:site_name" content="welcome to my Home">
 <meta property="og:description" content="###正则  是一个用来处理字符串的规则（加分项，好好学正则）  只能用来处理字符串 处理包含： A：验证当前字符串是否符合某个规则“正则匹配” B：把一个字符串中符合规则的字符获取到“正则捕获”    学习正则其实就是在学习如何编写规则每一个正则都是由“元字符”、“修饰符”两部分组成  12345//=&amp;gt;1、创建正则的两种方式let reg1=/^\d+$/g; //=&amp;gt;字面量方式l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552127728553.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552127848205.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552128013502.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552128189393.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552128789132.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552128977498.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552129348289.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552129391067.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552130089121.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552130585488.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552182156711.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552182085540.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552182065570.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/正则基础/1552182649316.png">
-<meta property="og:updated_time" content="2019-04-30T11:14:16.868Z">
+<meta property="og:updated_time" content="2019-05-16T00:39:24.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="强大的正则">
 <meta name="twitter:description" content="###正则  是一个用来处理字符串的规则（加分项，好好学正则）  只能用来处理字符串 处理包含： A：验证当前字符串是否符合某个规则“正则匹配” B：把一个字符串中符合规则的字符获取到“正则捕获”    学习正则其实就是在学习如何编写规则每一个正则都是由“元字符”、“修饰符”两部分组成  12345//=&amp;gt;1、创建正则的两种方式let reg1=/^\d+$/g; //=&amp;gt;字面量方式l">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/30/正则基础/1552127728553.png">
   
     <link rel="alternative" href="/atom.xml" title="welcome to my Home" type="application/atom+xml">
   
@@ -79,7 +64,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/index.html">分类</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -167,7 +152,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/index.html">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -262,29 +247,17 @@
 <p>1、中括号当中出现的元字符一般都是代表本身含义的</p>
 <ul>
 <li>let reg =/^.$/ ;  一个正则设置了<code>^</code>和<code>$</code> 那么代表的含义就是只能是xxx</li>
-<li><img src="./1552127728553.png" alt="Alt text"></li>
-<li><img src="./1552127848205.png" alt="Alt text"></li>
 </ul>
 <p>2、中括号中出现的两位数，不是两位数，而是两个数字中的任意一个</p>
 <ul>
 <li>let reg=/[18]/  不加^和$代表字符串只要包含xxx即可</li>
-<li><img src="./1552128013502.png" alt="Alt text"></li>
-<li><img src="./1552128189393.png" alt="Alt text"></li>
-<li><img src="./1552128789132.png" alt="Alt text"></li>
-<li><img src="./1552128977498.png" alt="Alt text"></li>
 </ul>
 </blockquote>
 <p><strong><code>()的分组作用</code></strong></p>
 <blockquote>
 <p>1、改变默认的优先级</p>
-<ul>
-<li><img src="./1552129348289.png" alt="Alt text"></li>
-<li><img src="./1552129391067.png" alt="Alt text"></li>
-</ul>
 <p>2、分组捕获</p>
 <ul>
-<li><img src="./1552130089121.png" alt="Alt text"></li>
-<li><img src="./1552130585488.png" alt="Alt text"></li>
 <li>正则捕获使用的是正则中的exec方法<ul>
 <li>如果可以匹配获取的结果是一个数组，如果不能匹配获取的结果是null</li>
 <li>如果我们只在匹配的时候，想要获取大正则中的部分信息，我们可以把这部分使用小括号包起来，形成一个分组，这样在捕获的时候，不仅可以把大正则匹配的信息捕获到，而且还单独的把小分组匹配的部分信息也捕获到了（分组捕获）</li>
@@ -322,8 +295,6 @@
 </ul>
 <p><code>正则捕获的贪婪性和分组捕获</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">let str=&apos;zhufeng&#123;2018&#125;peixun&#123;2019&#125;yangfan&#123;2020&#125;qihang&#123;2021&#125;&apos;;</span><br><span class="line">let reg=/\&#123;(\d+)\&#125;/g;//=&gt;大括号有特殊含义：&#123;n&#125;出现的次数</span><br><span class="line"></span><br><span class="line">console.log(reg.exec(str));//=&gt;[&apos;&#123;2018&#125;&apos;,&apos;2018&apos;]</span><br><span class="line">//在正则捕获的时候，如果正则存在分组，捕获的时候不仅仅把大正则匹配到的字符捕获到（数组第一项），</span><br><span class="line">//而且把小分组匹配的内容也单独抽取出来（数组中的第二项开始就是小分组捕获的内容）=&gt;“分组捕获” ，而</span><br><span class="line">//   /&#123;(?:\d+)\&#125;/g   ？：是用来阻止分组捕获内容的“只匹配不捕获”</span><br><span class="line"></span><br><span class="line">console.log(str.match(reg));//=&gt;[&apos;[2018]&apos;,&apos;[2019]&apos;...]  match方法也有自己的局限性，在正则设置了G的情况下，</span><br><span class="line">//基于match捕获的内容只有大正则匹配的，小分组捕获的内容得不到（不设置G的情况下和执行exec一样）</span><br><span class="line"></span><br><span class="line">//===========================================</span><br><span class="line">//=&gt;正则捕获还具备贪婪性，每一次匹配捕获的时候总是捕获到和正则匹配中最长的内容，例如：&apos;2&apos;符合\d+  </span><br><span class="line">//&apos;2018&apos;也符合\d+ 捕获的是最长的内容&apos;2018&apos;...</span><br><span class="line">let str=&apos;zhufeng2018peixun2019&apos;;</span><br><span class="line">let reg=/^\d+?/g;//=&gt;把问号放到量词元字符后面，代表的就不是出现0次或者一次了，而且取消捕获的贪婪性</span><br><span class="line">console.log(reg.exec(str));//=&gt;[&apos;2&apos;]</span><br></pre></td></tr></table></figure></p>
 <p><code>？在正则中的作用</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/*?在正则中的作用</span><br><span class="line">	1、量词元字符：出现零次或者一次</span><br><span class="line">		/-?/让减号出现一次或者不出现</span><br><span class="line">	2、取消贪婪性</span><br><span class="line">		/\d+?/ 捕获的时候只捕获最短匹配的内容</span><br><span class="line">	3、？：只匹配不捕获</span><br><span class="line">	4、?= 正向预查</span><br><span class="line">	5、?! 负向预查</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
-<p><code>test匹配</code></p>
-<p><img src="./1552182156711.png" alt="Alt text"><br><img src="./1552182085540.png" alt="Alt text"><br><img src="./1552182065570.png" alt="Alt text"><br><img src="./1552182649316.png" alt="Alt text"></p>
 <p><code>replace实现正则捕获的方法</code></p>
 <blockquote>
 <p>本身是字符串替换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">let str=&apos;zhufeng2018zhufeng2019&apos;;//&apos;zhufeng&apos;=&gt;&apos;zhufengpeixun&apos;</span><br><span class="line">//=&gt;真实项目中很多需求不基于正则是无法完成替换的</span><br><span class="line">/*str=str.replace(&apos;zhufeng&apos;,&apos;zhufengpeixun&apos;)</span><br><span class="line">console.log(str);//=&gt;&apos;zhufengpeixun2018zhufeng2019&apos;</span><br><span class="line"></span><br><span class="line">str=str.replace(&apos;zhufeng&apos;,&apos;zhufengpeixun&apos;)</span><br><span class="line">console.log(str);//=&gt;&apos;zhufengpeixunpeixun2018zhufeng2019&apos;*/</span><br><span class="line"></span><br><span class="line">str=str.replace(/zhufeng/g,&apos;zhufengpeixun&apos;);</span><br><span class="line">console.log(str);//=&gt;&apos;zhufengpeixun2018zhufengpeixun2019&apos;</span><br><span class="line"></span><br><span class="line">//========================================================</span><br><span class="line">//replace原理:用任意我们设置的东西去替换大正则匹配到的内容</span><br><span class="line">let str=&apos;zhufeng&#123;val:2018&#125;zhufeng&#123;val:2019&#125;&apos;,</span><br><span class="line">	reg=/\&#123;val:(\d+)\&#125;/g;</span><br><span class="line">str=str.replace(reg,&apos;@&apos;);//用reg正则和str字符串进行匹配，匹配几次就替换几次，每一次都是把当前‘大正则’匹配的结用第二个传递的字符串替换掉了</span><br><span class="line">console.log(str);// &apos;zhufeng@zhufeng@&apos;</span><br><span class="line"></span><br><span class="line">str=str.replace(reg,&apos;$1&apos;);//$1不是拿这个字符串替换掉大正则匹配的内容，此处的$1代表第一个分组匹配的内容.</span><br><span class="line">console.log(str);// &apos;zhufeng2018zhufeng2019&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">	1、REG和STR匹配多少次，函数就被触发执行多少次，而且传递了一些参数信息值</span><br><span class="line">	2、每一次ARG中存储的信息，和执行exec捕获的信息相似（内置原理：每一次正则匹配到结果，</span><br><span class="line">	都把函数执行，然后基于exec把本次匹配的信息捕获到，然后把捕获的信息传递给这个函数）</span><br><span class="line">	3、每一次函数中返回的是啥，就把当前大正则匹配的内容替换成啥</span><br><span class="line">*/</span><br><span class="line">str=str.replace(reg,(...arg)=&gt;&#123;</span><br><span class="line">	console.log(arg);//=&gt;基于exec匹配的那些内容</span><br><span class="line">	return &apos;AA&apos;;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(str);//zhufengAAzhufengAA</span><br></pre></td></tr></table></figure></p>
@@ -353,6 +324,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -416,18 +398,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/30/数组/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/30/postName/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          数组的基本方法
+          浅谈javascript中的数据类型
         
       </div>
     </a>
   
   
-    <a href="/2019/04/30/postName/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">浅谈javascript中的数据类型</div>
+    <a href="/2019/04/21/less/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">less</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -569,6 +551,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
@@ -578,10 +564,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

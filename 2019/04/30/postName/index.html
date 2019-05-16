@@ -18,10 +18,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/30/postName/1550739939224.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/30/postName/1550740266812.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/postName/1550742000979.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/postName/1550742194531.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/30/postName/1550822696428.png">
-<meta property="og:updated_time" content="2019-05-11T06:57:30.979Z">
+<meta property="og:updated_time" content="2019-05-16T00:39:24.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈javascript中的数据类型">
 <meta name="twitter:description" content="JS中的数据类型（重点）  基本数据类型（值类型） number:数字 string:字符串 boolean:布尔 null：空对象指针 undefined:未定义   引用数据类型 object 对象数据类型 {}普通对象 []数组 /^$/正则 …   function 函数数据类型     1234567891012 12.5 -12.5 0&apos;fhjf&apos; &quot;祝福&quot; =&amp;gt;单双引号包裹起来">
@@ -70,7 +68,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/index.html">分类</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -158,7 +156,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/index.html">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -238,9 +236,9 @@
 <p>把其他数据类型的值转换为布尔类型</p>
 <p> 只有‘0 、NaN、 空字符串、 null、undefined’ 这五个数值转换为布尔类型的false，其余的都会变为true。</p>
 </blockquote>
-<p><img src="./1550742000979.png" alt="Alt text"><br><strong><code>!</code></strong></p>
+<p><strong><code>!</code></strong></p>
 <blockquote>
-<p>!=: 不等于<br>叹号在JS中还有一个作用：<code>取反</code>，先把值转换为布尔类型，然后再去取反<br><img src="./1550742194531.png" alt="Alt text"></p>
+<p>!=: 不等于<br>叹号在JS中还有一个作用：<code>取反</code>，先把值转换为布尔类型，然后再去取反</p>
 </blockquote>
 <p><strong><code>!!</code></strong></p>
 <blockquote>
@@ -277,7 +275,7 @@
 <p>在parseInt的基础上可以识别小数点</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'12.5'</span>) -&gt;<span class="number">12.5</span></span><br></pre></td></tr></table></figure>
-<p>课后思考：parseInt常用的只需要传递一个值做参数即可，但是它支持多个参数，其他参数的意思<br>例如：parseInt(‘12.5’,10)<br>parseInt(string, radix)<br>1.parseInt方法还可以接受第二个参数（2到36之间），表示被解析的值的进制，返回该值对应的十进制数。默认情况下，parseInt的第二个参数为10，即默认是十进制转十进制<br>2.如果第二个参数不是数值，会被自动转为一个整数。这个整数只有在2到36之间，才能得到有意义的结果，超出这个范围，则返回NaN。如果第二个参数是0、undefined和null，则直接忽略。<br>3.当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。<br>举例，如果 string 以 “0x” 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。<br>parseInt(“10”);            //返回 10<br>parseInt(“19”,10);        //返回 19 (10+9)<br>parseInt(“11”,2);        //返回 3 (2+1)<br>parseInt(“17”,8);        //返回 15 (8+7)<br>parseInt(“1f”,16);        //返回 31 (16+15)<br>parseInt(“010”);        //未定：返回 10 或 8</p>
+<p>思考：parseInt常用的只需要传递一个值做参数即可，但是它支持多个参数，其他参数的意思<br>例如：parseInt(‘12.5’,10)<br>parseInt(string, radix)<br>1.parseInt方法还可以接受第二个参数（2到36之间），表示被解析的值的进制，返回该值对应的十进制数。默认情况下，parseInt的第二个参数为10，即默认是十进制转十进制<br>2.如果第二个参数不是数值，会被自动转为一个整数。这个整数只有在2到36之间，才能得到有意义的结果，超出这个范围，则返回NaN。如果第二个参数是0、undefined和null，则直接忽略。<br>3.当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。<br>举例，如果 string 以 “0x” 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。<br>parseInt(“10”);            //返回 10<br>parseInt(“19”,10);        //返回 19 (10+9)<br>parseInt(“11”,2);        //返回 3 (2+1)<br>parseInt(“17”,8);        //返回 15 (8+7)<br>parseInt(“1f”,16);        //返回 31 (16+15)<br>parseInt(“010”);        //未定：返回 10 或 8</p>
 <hr>
 <h3 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h3><blockquote>
 <p>null : 空，没有<br>undefined: 未定义，没有</p>
@@ -342,6 +340,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -405,18 +414,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/30/正则基础/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/30/数组/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          强大的正则
+          数组的基本方法
         
       </div>
     </a>
   
   
-    <a href="/2019/04/21/less/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">less</div>
+    <a href="/2019/04/30/正则基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">强大的正则</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -558,6 +567,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
@@ -567,10 +580,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

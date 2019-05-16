@@ -17,12 +17,7 @@
 <meta property="og:description" content="数组基础知识数组基础结构和遍历 数组也是对象类型的 typeOf [] -&amp;gt; &amp;#39;object&amp;#39;数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度   类数组：类似于数组但不是数组1、通过getElementsByTagName获取的元素集合是类数组2、函数中的实参集合arguments也是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551407328622.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551407540960.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551407785732.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551437431167.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551437443489.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/数组/1551412059835.png">
-<meta property="og:updated_time" content="2019-05-11T06:57:30.947Z">
+<meta property="og:updated_time" content="2019-05-16T00:39:24.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组的基本方法">
 <meta name="twitter:description" content="数组基础知识数组基础结构和遍历 数组也是对象类型的 typeOf [] -&amp;gt; &amp;#39;object&amp;#39;数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度   类数组：类似于数组但不是数组1、通过getElementsByTagName获取的元素集合是类数组2、函数中的实参集合arguments也是">
@@ -71,7 +66,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/index.html">分类</a></li>
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -159,7 +154,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/index.html">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -198,7 +193,7 @@
 <p>数组也是对象类型的 <code>typeOf [] -&gt; &#39;object&#39;</code><br>数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度<br><img src="./1551407328622.png" alt="Alt text"></p>
 </blockquote>
 <blockquote>
-<p>类数组：类似于数组但不是数组<br>1、通过getElementsByTagName获取的元素集合是类数组<br>2、函数中的实参集合arguments也是类数组<br><img src="./1551407540960.png" alt="Alt text"><br><img src="./1551407785732.png" alt="Alt text"></p>
+<p>类数组：类似于数组但不是数组<br>1、通过getElementsByTagName获取的元素集合是类数组<br>2、函数中的实参集合arguments也是类数组</p>
 </blockquote>
 <h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法"></a>数组中的常用方法</h4><blockquote>
 <p><code>console.dir(Array.prototype)</code>:查看数组中的方法<br>记忆维度</p>
@@ -256,7 +251,7 @@
 <li>slice(n) 从索引N开始找到末尾</li>
 <li>slice(0)/slice()  数组克隆，克隆一份和原来数组一模一样的新数组</li>
 <li>slice支持负数索引，如果传递的索引为负数，浏览器解析的时候是按照 总长度+负数索引 来处理的</li>
-<li>思考题：若在slice中传的参数值是小数，非数据类型，值超越范围会是什么情况？<br><img src="./1551437431167.png" alt="Alt text"><br><img src="./1551437443489.png" alt="Alt text"><br>总结：若参数值是小数，其会向下取整；若是非数据类型，会转换为数据类型；超出范围得到的是空数组。</li>
+<li>思考题：若在slice中传的参数值是小数，非数据类型，值超越范围会是什么情况？<br>总结：若参数值是小数，其会向下取整；若是非数据类型，会转换为数据类型；超出范围得到的是空数组。</li>
 </ul>
 </blockquote>
 <a id="more"></a>
@@ -285,15 +280,15 @@
 <ul>
 <li>参数：指定的连接符</li>
 <li>返回值：转化后的字符串</li>
-<li>原有数组不变<br><img src="./1551412059835.png" alt="Alt text"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;已知数组中的每一项都是数字，想实现数组求和，我们如何实现？</span><br><span class="line">//=&gt;1、用循环求和</span><br><span class="line"></span><br><span class="line">//=&gt;2、利用join</span><br><span class="line">var total=eval(ary.join(&apos;+&apos;))</span><br><span class="line">//=&gt;eval:把字符串变为JS表达式执行</span><br></pre></td></tr></table></figure>
-</li>
+<li>原有数组不变</li>
 </ul>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;已知数组中的每一项都是数字，想实现数组求和，我们如何实现？</span><br><span class="line">//=&gt;1、用循环求和</span><br><span class="line"></span><br><span class="line">//=&gt;2、利用join</span><br><span class="line">var total=eval(ary.join(&apos;+&apos;))</span><br><span class="line">//=&gt;eval:把字符串变为JS表达式执行</span><br></pre></td></tr></table></figure>
 <p><code>实现数组中每一项的排序和排列</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">*1、reverse:把数组中的每一项倒过来排列</span><br><span class="line">*	参数：无</span><br><span class="line">*	返回值:排列后的数组</span><br><span class="line">*	原有数组改变</span><br><span class="line">*</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">* 2、sort：实现数组的排序</span><br><span class="line">	* 参数：无或者回调函数</span><br><span class="line">	* 返回值：排序后的数组</span><br><span class="line">	* 原有数组改变</span><br><span class="line">	</span><br><span class="line">* 在不传递参数的情况下：可以给10以内的数字进行升序排列，但是超过10的就无法处理了（多位数只识别第一位）</span><br><span class="line">*  </span><br><span class="line">*  ary.sort(function(a,b))&#123;</span><br><span class="line">	* return a-b; //=&gt;升序</span><br><span class="line">	* return b-a;//=&gt;降序</span><br><span class="line">*  </span><br><span class="line">*  &#125;）</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
 <p><code>验证数组中是否包含某一项</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/* indexOf / lastIndexOf :获取当前项在数组中第一次或者最后一次出现位置的索引</span><br><span class="line">	* 数组中的这两个方法在IE6-8下不兼容</span><br><span class="line">	* 字符串中的这两个方法兼容所有的浏览器</span><br><span class="line"></span><br><span class="line">*	如果当前数组中没有这一项，返回的索引是-1，我们根据这一点可以验证数组中是否包含这一项</span><br><span class="line">*/	</span><br><span class="line">	if(ary.indexOf(12)&gt;-1)&#123;</span><br><span class="line">		//=&gt;数组中包含12</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//=&gt;不兼容下的验证数组中是否包含某一项的处理方式</span><br><span class="line">Arrary.prototype.myIndexOf=function myIndexOf(value)&#123;</span><br><span class="line">	var result=-1;</span><br><span class="line">	for(var i=0;i&lt;this.length;i++)&#123;</span><br><span class="line">		if(value===this[i])&#123;</span><br><span class="line">			result=i;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return result;</span><br><span class="line">&#125;</span><br><span class="line">ary.myIndexOf(12);</span><br></pre></td></tr></table></figure></p>
 <p><code>遍历数组中每一项的方法</code></p>
 <blockquote>
-<p>以下的方法在IE6-8下都不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">	forEach :遍历数组中的每一项</span><br><span class="line">*/</span><br><span class="line">ary.forEach(function(value,index)&#123;</span><br><span class="line">	//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">	map: 遍历数组中的每一项，在forEach的基础上，可以修改每一项的值</span><br><span class="line">*/</span><br><span class="line">ary.map(function(value,index)&#123;</span><br><span class="line">		//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">		return xxx;//=&gt;return后面返回的结果就是把当前遍历的这一项修改为xxx</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">filter</span><br><span class="line">find</span><br><span class="line">reduce</span><br><span class="line">every</span><br><span class="line">//=&gt;查以上方法是做什么的</span><br></pre></td></tr></table></figure></p>
+<p>以下的方法在IE6-8下都不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">	forEach :遍历数组中的每一项</span><br><span class="line">*/</span><br><span class="line">ary.forEach(function(value,index)&#123;</span><br><span class="line">	//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">	map: 遍历数组中的每一项，在forEach的基础上，可以修改每一项的值</span><br><span class="line">*/</span><br><span class="line">ary.map(function(value,index)&#123;</span><br><span class="line">		//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">		return xxx;//=&gt;return后面返回的结果就是把当前遍历的这一项修改为xxx</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
       
@@ -319,6 +314,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -383,8 +389,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/04/30/正则基础/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">强大的正则</div>
+    <a href="/2019/04/30/postName/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浅谈javascript中的数据类型</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -526,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
@@ -535,10 +545,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
