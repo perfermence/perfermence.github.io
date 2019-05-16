@@ -168,6 +168,130 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-postName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/30/postName/">浅谈javascript中的数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/30/postName/" class="archive-article-date">
+  	<time datetime="2019-04-30T10:47:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="JS中的数据类型（重点）"><a href="#JS中的数据类型（重点）" class="headerlink" title="JS中的数据类型（重点）"></a>JS中的数据类型（重点）</h3><blockquote>
+<ul>
+<li>基本数据类型（值类型）<ul>
+<li>number:数字</li>
+<li>string:字符串</li>
+<li>boolean:布尔</li>
+<li>null：空对象指针</li>
+<li>undefined:未定义</li>
+</ul>
+</li>
+<li>引用数据类型<ul>
+<li>object 对象数据类型<ul>
+<li>{}普通对象</li>
+<li>[]数组</li>
+<li>/^$/正则</li>
+<li>…</li>
+</ul>
+</li>
+<li>function 函数数据类型</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span> <span class="number">12.5</span> <span class="number">-12.5</span> <span class="number">0</span></span><br><span class="line"><span class="string">'fhjf'</span> <span class="string">"祝福"</span> =&gt;单双引号包裹起来的都是字符串（单双引号没有区别）</span><br><span class="line"><span class="literal">true</span> <span class="literal">false</span>=&gt; 布尔类型：只有两个值;</span><br><span class="line"><span class="literal">null</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">&#123;<span class="attr">name</span>:<span class="string">'dfd'</span>,<span class="string">'dfdf'</span>&#125;</span><br><span class="line">[<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>]</span><br><span class="line">/^-?(\d|([<span class="number">1</span><span class="number">-9</span>]\d+))(\.\d+)?$/</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>这么多数据类型JS如何去检测？(背)</p>
+<ul>
+<li>typepof: 检测数据类型的运算符</li>
+<li>instanceof: 检测某个实例是否属于这个类</li>
+<li>constructor: 获取当前实例的构造器</li>
+<li>Object.prototype.toString.call: 获取当前实例的所属类信息</li>
+</ul>
+<p><strong>typeof</strong></p>
+<blockquote>
+<p>使用typeof检测，返回的结果是一个字符串，字符串中包含的内容证明了值是属于什么类型的</p>
+<p>[局限性]<br>1.typeof null 不是’null’而是’object’ : 因为Null虽然是单独的一个数据类型，但是它原本意思是空对象指针，浏览器使用typeof检测的时候会把它按照对象来检测<br>2.使用typeof 无法具体细分出到底是数组还是正则，因为返回的结果都是’object’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;  =&gt;<span class="string">"number"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">13</span>;</span><br><span class="line"><span class="keyword">typeof</span> num;=&gt;<span class="string">"number"</span> <span class="comment">//实际检测的是13的数据类型，num 无意义</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="./1550739939224.png" alt="Alt text"><br><img src="./1550740266812.png" alt="Alt text"></p>
+<p>腾讯面试题：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="keyword">typeof</span> []);=&gt;<span class="string">"string"</span></span><br><span class="line"><span class="keyword">typeof</span> [] -&gt;<span class="string">"object"</span>   <span class="comment">//因为typeof返回的值就是一个字符串</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">"object"</span> -&gt;<span class="string">"string"</span> <span class="comment">//检测的类型是字符串</span></span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2019/04/30/postName/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/30/postName/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-正则基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -298,130 +422,6 @@
 
 
   
-    <article id="post-postName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/postName/">浅谈javascript中的数据类型</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/30/postName/" class="archive-article-date">
-  	<time datetime="2019-04-30T10:47:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="JS中的数据类型（重点）"><a href="#JS中的数据类型（重点）" class="headerlink" title="JS中的数据类型（重点）"></a>JS中的数据类型（重点）</h3><blockquote>
-<ul>
-<li>基本数据类型（值类型）<ul>
-<li>number:数字</li>
-<li>string:字符串</li>
-<li>boolean:布尔</li>
-<li>null：空对象指针</li>
-<li>undefined:未定义</li>
-</ul>
-</li>
-<li>引用数据类型<ul>
-<li>object 对象数据类型<ul>
-<li>{}普通对象</li>
-<li>[]数组</li>
-<li>/^$/正则</li>
-<li>…</li>
-</ul>
-</li>
-<li>function 函数数据类型</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span> <span class="number">12.5</span> <span class="number">-12.5</span> <span class="number">0</span></span><br><span class="line"><span class="string">'fhjf'</span> <span class="string">"祝福"</span> =&gt;单双引号包裹起来的都是字符串（单双引号没有区别）</span><br><span class="line"><span class="literal">true</span> <span class="literal">false</span>=&gt; 布尔类型：只有两个值;</span><br><span class="line"><span class="literal">null</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">&#123;<span class="attr">name</span>:<span class="string">'dfd'</span>,<span class="string">'dfdf'</span>&#125;</span><br><span class="line">[<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>]</span><br><span class="line">/^-?(\d|([<span class="number">1</span><span class="number">-9</span>]\d+))(\.\d+)?$/</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>这么多数据类型JS如何去检测？(背)</p>
-<ul>
-<li>typepof: 检测数据类型的运算符</li>
-<li>instanceof: 检测某个实例是否属于这个类</li>
-<li>constructor: 获取当前实例的构造器</li>
-<li>Object.prototype.toString.call: 获取当前实例的所属类信息</li>
-</ul>
-<p><strong>typeof</strong></p>
-<blockquote>
-<p>使用typeof检测，返回的结果是一个字符串，字符串中包含的内容证明了值是属于什么类型的</p>
-<p>[局限性]<br>1.typeof null 不是’null’而是’object’ : 因为Null虽然是单独的一个数据类型，但是它原本意思是空对象指针，浏览器使用typeof检测的时候会把它按照对象来检测<br>2.使用typeof 无法具体细分出到底是数组还是正则，因为返回的结果都是’object’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;  =&gt;<span class="string">"number"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">13</span>;</span><br><span class="line"><span class="keyword">typeof</span> num;=&gt;<span class="string">"number"</span> <span class="comment">//实际检测的是13的数据类型，num 无意义</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p><img src="./1550739939224.png" alt="Alt text"><br><img src="./1550740266812.png" alt="Alt text"></p>
-<p>腾讯面试题：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="keyword">typeof</span> []);=&gt;<span class="string">"string"</span></span><br><span class="line"><span class="keyword">typeof</span> [] -&gt;<span class="string">"object"</span>   <span class="comment">//因为typeof返回的值就是一个字符串</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">"object"</span> -&gt;<span class="string">"string"</span> <span class="comment">//检测的类型是字符串</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/04/30/postName/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/30/postName/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -519,15 +519,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
