@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>welcome to my Home</title>
+  <title>Tag: 工具 | welcome to my Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="就读于南京邮电大学,专注技术,热爱生活。">
 <meta name="keywords" content="前端,VUE,Jquery,js,css,html5,移动端">
 <meta property="og:type" content="website">
 <meta property="og:title" content="welcome to my Home">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/工具/index.html">
 <meta property="og:site_name" content="welcome to my Home">
 <meta property="og:description" content="就读于南京邮电大学,专注技术,热爱生活。">
 <meta property="og:locale" content="zh-Hans">
@@ -168,92 +168,46 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-正则基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/17/git/" class="archive-article-date">
+  	<time datetime="2019-05-17T05:50:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/正则基础/">强大的正则</a>
+      <a class="archive-article-title" href="/2019/05/17/git/">Git操作</a>
     </h1>
   
 
-        
-        <a href="/2019/04/30/正则基础/" class="archive-article-date">
-  	<time datetime="2019-04-30T10:47:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###正则</p>
-<blockquote>
-<p>是一个用来处理字符串的规则（加分项，好好学正则）</p>
-<ul>
-<li>只能用来处理字符串</li>
-<li>处理包含：<ul>
-<li>A：验证当前字符串是否符合某个规则“正则匹配”</li>
-<li>B：把一个字符串中符合规则的字符获取到“正则捕获”</li>
-</ul>
-</li>
-</ul>
-<p>学习正则其实就是在学习如何编写规则<br>每一个正则都是由“元字符”、“修饰符”两部分组成</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;1、创建正则的两种方式</span><br><span class="line">let reg1=/^\d+$/g; //=&gt;字面量方式</span><br><span class="line">let reg=new RegExp(&quot;^\\d+$&quot;,&quot;g&quot;);//=&gt;构造函数方式</span><br><span class="line"></span><br><span class="line">//=&gt;2、正则两个斜杠之间包起来的都是“元字符”，斜杠后面出现的都是“修饰符”</span><br></pre></td></tr></table></figure>
-<p><code>常用修饰符</code><br>i : ignoreCase  忽略大小写匹配<br>m：multiline  多行匹配<br>g ：global   全局匹配</p>
-<p><code>常用元字符</code></p>
-<blockquote>
-<p>[特殊元字符]</p>
-<ul>
-<li><code>\d</code>  0~9之间的一个数字</li>
-<li><code>\D</code> 非0~9之间的任意字符</li>
-<li><code>\w</code> “数字、字母、下划线”中任意一个</li>
-<li><code>\s</code> 匹配任意一个空白字符（包括\t制表符[TAB键四个空格]）</li>
-<li><code>\b</code> 匹配边界符   例如：’zhu’ (z左边和u右边就是边界)</li>
-<li><code>\n</code> 匹配一个换行符</li>
-<li><code>\</code> 转义字符（把一个普通字符转义为特殊的字符，例如：\d，把有特殊含义的转换为普通意思；.此处的点就不是任意字符，而是一个小数点）</li>
-<li><code>.</code> 不仅仅是小数点，代表除了\n以为的任意字符</li>
-<li><code>^</code> 以某个元字符开头</li>
-<li><code>$</code> 以某个元字符结尾</li>
-<li><code>|</code>  例如：x|y  x或者y中的任意一个</li>
-<li><code>[]</code> 每一项中的任意一个 例如：[xyz] XYZ中任意一个</li>
-<li><code>[^]</code> 非</li>
-<li><code>[a-z]</code> 获取A-中任意一个字符（[0-9] 等价于\d）</li>
-<li><code>[^a-z]</code> 除了a-z的任意字符</li>
-<li><code>()</code> 正则分组</li>
-<li><code>(?:)</code> 当前分组只匹配不捕获</li>
-<li><code>(?=)</code>正向预查</li>
-<li><code>(?!)</code> 负向预查</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/04/30/正则基础/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">RegExp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -266,147 +220,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/30/正则基础/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-less" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/21/less/">less</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/21/less/" class="archive-article-date">
-  	<time datetime="2019-04-21T14:59:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="LESS"><a href="#LESS" class="headerlink" title="LESS"></a>LESS</h3><blockquote>
-<p>它是 CSS预编译语言，和它类似的还有sass/stylus…</p>
-<p>CSS是标记语言，不是编程语言，没有类、实例、函数、变量等东西；而less等预编语言就是让CSS具备面向对象编程的思想；但是浏览器不能直接识别和渲染less代码，，需要我们把less代码预先编译为正常的CSS后，再交给浏览器渲染解析</p>
-</blockquote>
-<h3 id="less的编译"><a href="#less的编译" class="headerlink" title="less的编译"></a>less的编译</h3><ul>
-<li>在开发环境下编译（产品还未开发完，正在开发中，这个是开发环境（在本地开发））</li>
-</ul>
-<blockquote>
-<p>在开发环境下，我们一般通过导入less插件来随时编译LESS代码<br>由于每一次加载页面都需要导入LESS.JS，并且把less文件重编译为CSS（很消耗性能，页面打开速度肯定会变慢），所以真实项目中，只有开发环境下我们使用这种模式，生产环境下，我们肯定需要事先把写好的LESS编译为正常的CSS后，在上线，以后用户访问的都是编译好的CSS，而不是拿less现编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;rel=stylesheet/less</span><br><span class="line">&lt;link rel=&quot;stylesheet/less&quot; ...&gt;</span><br><span class="line"></span><br><span class="line">//=&gt;导入JS文件即可</span><br><span class="line">&lt;script src=&apos;js/less-2.5.3.min.js&apos;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<ul>
-<li><p>在生产环境下编译（产品开发完成了，需要部署到服务器上，服务器上的环境叫做生产环境）</p>
-<blockquote>
-<p>项目上线，不能把less部署，这样用户每一次打开页面都需要重新的编译，非常耗性能，我们部署到服务器上的是编译后的CSS<br>基于NODE编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1、在当前电脑的全局环境下安装less模块</span><br><span class="line">	 npm install less -g</span><br><span class="line">	验证是否安装成功  lessc -v</span><br><span class="line">2、基于命令把我们的less编译成CSS</span><br><span class="line">	在less文件目录下执行DOS命令：</span><br><span class="line">	 lessc xxx/xxx.less xxx/xxx.min.css -x 把指定目录中的less编译成为CSS（并且实现了代码的压缩），把编译后的CSS存入到具体指定路径中的文件中；上线前在HTML中导入的是CSS文件</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>目前基于webpack和框架实现工程化开发的时候，我们都在webpack配置文件中，配置出less的编译（需要安装less？less-loader等模块），这样不管是开发环境下的预览，还是部署到生产环境下，都是基于webpack中的less模块编译的</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/21/less/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
 
 
           </div>
@@ -432,10 +256,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: false,

@@ -168,6 +168,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/17/git/">Git操作</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/17/git/" class="archive-article-date">
+  	<time datetime="2019-05-17T05:50:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Git</p>
+<p>###git的基础知识</p>
+<ul>
+<li>git是一个分布式代码管理控制系统（linux开发者开发的) </li>
+<li>记录当前产品代码的所有版本信息（历史修改信息），而且方便快速回退到某一个具体的版本方便团队协作开发，能够检测代码冲突，能够合并代码等 </li>
+<li>其之所以是分布式，因为每个开发者的本地都是一个Git仓库 （在本地就可以生产历史版本）</li>
+<li><p>Git跟踪并管理的是修改，而非文件。</p>
+</li>
+<li><p>思考：svn和git的区别<br>1、git是分布式，svn是集中式<br>2、传输方式的区别，git更加快一点<br>msysgit 是Windows下的git版本<br>下载网址：<a href="https://git-scm.comgit" target="_blank">https://git-scm.comgit</a></p>
+</li>
+</ul>
+<p>####git基础操作<br><code>如何在电脑本地创建git仓库，管理我们的代码</code></p>
+<ul>
+<li><p>初次使用git，我们先在本地配置一些基础信息 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config –global user.name xxx </span><br><span class="line">$ git config –global user.email xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建议大家配置的用户名和邮箱和GitHub保持一致，这样以后在本地向GitHub推送内容的时候，能够展示出是谁推荐的</p>
+</li>
+</ul>
+<p><code>git init:创建仓库</code></p>
+<blockquote>
+<p><code>仓库</code>又名版本库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">会在当前目录中创建一个空的仓库，文件目录中生成一个“.git”的隐藏文件，这个文件很重要，我们本地仓库的版本信息等都存储在这里</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>.gitignore</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在当前目录（git仓库根目录）创建一个“.gitignore”文件，这个文件中存储了当git提交的时候所忽略的文件</span><br><span class="line"></span><br><span class="line">可以基于Linux命令$ touch .gitignore(Mac终端，git bash、或者集成了Linux的DOS，可以使用Linux命令)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>当我们在本地创建一个git仓库后，我们可以基于这个仓库管理我们的代码 </p>
+</blockquote>
+<p><strong><code>git 工作流程</code></strong><br>每一个仓库都划分为三个区域</p>
+<ul>
+<li><p>工作区：编辑代码的地方 </p>
+<blockquote>
+<p>就是你在电脑里能看到的目录，比如我们创建的文件夹就是一个工作区。</p>
+</blockquote>
+</li>
+<li><p>暂存区：临时存储要生成代码的地方</p>
+<blockquote>
+<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
+</blockquote>
+</li>
+<li>历史区：存储的是生成的每一个历史版本，可以从历史区回退到某一个具体版本的代码，用代码覆盖工作区的代码</li>
+</ul>
+<p><strong><code>从工作区-&gt;暂存区</code></strong><br> $ git status :<br>查看代码或者文件的状态（当前处于哪个区域）：</p>
+<ul>
+<li><code>红色</code>（当前处于工作区，还没有提交到暂存区）</li>
+<li><code>绿色</code>（当前处于暂存区，还没有提交到历史区）</li>
+<li>如果没有文件，代表三个区域代码已经同步（即三个区域都有代码，保持同步），历史版本也在历史区生成了. 工作区提交到暂存区，暂存区提交到历史区<br><strong><code>重点</code></strong>：暂存区始终是存放提交的内容，并没有消失，以后工作区内容修改，会和暂存区作对比，依次来判断哪些是新处理的</li>
+</ul>
+<p><strong><code>常用操作命令</code></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//工作区-&gt;暂存区（把当前工作区中所有最新修改的文件，都提交到暂存区（不包括删除的））</span><br><span class="line">$ git add . /$ git add -A:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">暂存区提交到历史区</span><br><span class="line">$ git commit:这样执行后，会弹出一个提交文本输入界面，需要我们编写本次提交到历史区给当前版本编写的备注信息</span><br><span class="line">先按 i 进入编辑插入模式-&gt;输备注信息-&gt;按ESC-&gt;输入”: wq” (保存并退出) </span><br><span class="line">$ git commit -m &apos;自己需要备注的信息&apos;提交信息 </span><br><span class="line"></span><br><span class="line">$ git log:查看提交记录</span><br><span class="line">git log --pretty=oneline 每条记录只在一行显示</span><br></pre></td></tr></table></figure></p>
+<p><code>查看每个区代码的区别</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git diff:工作区与暂存区的区别 </span><br><span class="line">$ git diff master:工作区与历史区区别（master 分支） </span><br><span class="line">$ git diff --cached:暂存区与历史区区别</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2019/05/17/git/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/17/git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-DOM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -389,161 +524,6 @@
 
 
   
-    <article id="post-数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/数组/">数组的基本方法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/30/数组/" class="archive-article-date">
-  	<time datetime="2019-04-30T11:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数组基础知识"><a href="#数组基础知识" class="headerlink" title="数组基础知识"></a>数组基础知识</h3><h4 id="数组基础结构和遍历"><a href="#数组基础结构和遍历" class="headerlink" title="数组基础结构和遍历"></a>数组基础结构和遍历</h4><blockquote>
-<p>数组也是对象类型的 <code>typeOf [] -&gt; &#39;object&#39;</code><br>数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度</p>
-</blockquote>
-<blockquote>
-<p>类数组：类似于数组但不是数组<br>1、通过getElementsByTagName获取的元素集合是类数组<br>2、函数中的实参集合arguments也是类数组</p>
-</blockquote>
-<h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法"></a>数组中的常用方法</h4><blockquote>
-<p><code>console.dir(Array.prototype)</code>:查看数组中的方法<br>记忆维度</p>
-<ul>
-<li>1、方法的意义和作用</li>
-<li>2、方法的形参</li>
-<li>3、方法的返回值</li>
-<li>4、通过此方法，原来的数组是否发生了变化</li>
-</ul>
-</blockquote>
-<p><code>数组的增加、修改、删除</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var ary = [12,23,34];</span><br><span class="line">//=&gt;增加</span><br><span class="line">//=&gt;1、push：向数组的末尾追加新内容</span><br><span class="line">//=&gt;2、unshift:向数组开头追加新元素</span><br><span class="line">//=&gt;3、把它当做一个普通对象来操作：使用对象键值对操作，给其设置新的属性（索引）：ary[ary.length]=xxx，向数组末尾追加了新的内容</span><br><span class="line"></span><br><span class="line">//=&gt;删除</span><br><span class="line">//=&gt;1、pop：删除数组最后一项</span><br><span class="line">//=&gt;2、shift：删除数组第一项</span><br><span class="line">//=&gt;3、delete：把数组当做普通对象操作，delete ary[索引]：删除指定索引这一项（当前项被删除后，原有数组其他项的索引不会改变，当前数组的length也不会改变：不推荐使用）</span><br><span class="line">//=&gt;4、ary.length--:删除数组最后一项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//=&gt;修改</span><br><span class="line">//=&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>push</code></p>
-<blockquote>
-<p>向数组末尾追加新内容<br>参数：一到多个，任何数据类型都可以，要给数组末尾追加什么，直接传递到push方法中即可，传递多个用逗号隔开<br>返回值：新增后数组的长度<br>原有数组改变了</p>
-</blockquote>
-<p><code>unshift</code></p>
-<blockquote>
-<p>向数组开头追加新元素<br>参数：需要追加的内容（可以是多个任何数据类型的值）<br>返回值：新增后数组的长度<br>原来数组改变了</p>
-</blockquote>
-<p><code>pop</code></p>
-<blockquote>
-<p>删除数组最后一项<br>参数：无参数，即输入什么删除的都是最后一项<br>返回值：被删除的那一项内容<br>原有数组改变了</p>
-</blockquote>
-<p><code>shift</code></p>
-<blockquote>
-<p>删除数组第一项<br>参数：无参数，即输入什么都是删除第一项<br>返回值：被删除的那一项内容<br>原有数组改变了，使用shift删除第一项后，后面每一项的索引都要向前进一位（导致后面项的索引发生改变）</p>
-</blockquote>
-<p><code>splice</code></p>
-<blockquote>
-<p>数组中内置方法：可以实现数组增加，修改，删除，本意是删除<br>实现删除：</p>
-<ul>
-<li>splice(n,m) ：从索引n开始删除m个（若没有参数m则从n删除到数组的末尾；n也不写则是一项也不删除 ）   返回值：被删除的内容（以一个新数组保存）   原有数组该变了</li>
-<li>splice(0)：清空数组</li>
-<li>splice()：一项都不删除，返回一个新的空数组</li>
-</ul>
-<p>实现修改</p>
-<ul>
-<li>splice(n,m,x)：在原有删除的基础上，把x代替删除的内容</li>
-</ul>
-<p>实现增加</p>
-<ul>
-<li>splice(n,0,x)：在修改的基础上，我们一项都不删除，把x插入到索引n的前面</li>
-<li>ary.splice(0,0,x)  : 向数组开头追加新的内容</li>
-<li>ary.splice(ary.length,0,x):向数组末尾追加新的内容</li>
-</ul>
-</blockquote>
-<p><code>数组的查询</code></p>
-<blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slice:数组查询</span><br></pre></td></tr></table></figure>
-<p><code>slice</code></p>
-<blockquote>
-<p>数组的查询<br>参数：slice(n,m)  从索引N开始找到索引M处（不包括M）<br>返回值：把找到的部分以一个新数组返回<br>原来的数组不变</p>
-<ul>
-<li>slice(n) 从索引N开始找到末尾</li>
-<li>slice(0)/slice()  数组克隆，克隆一份和原来数组一模一样的新数组</li>
-<li>slice支持负数索引，如果传递的索引为负数，浏览器解析的时候是按照 总长度+负数索引 来处理的</li>
-<li>思考题：若在slice中传的参数值是小数，非数据类型，值超越范围会是什么情况？<br>总结：若参数值是小数，其会向下取整；若是非数据类型，会转换为数据类型；超出范围得到的是空数组。</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/04/30/数组/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/30/数组/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -650,6 +630,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
