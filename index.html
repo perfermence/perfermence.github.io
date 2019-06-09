@@ -211,17 +211,54 @@
 <li><p><code>更新语句</code></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//通用语句</span><br><span class="line">	UPDATE table_name SET field1=new-value1, field2=new-value2</span><br><span class="line">[WHERE Clause]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>插入</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">	 INSERT INTO table_name ( field1, field2,...fieldN )VALUES( value1, value2,...valueN ); </span><br><span class="line">	 </span><br><span class="line">	 attention:如果数据是字符型，必须使用单引号或者双引号，如：&quot;value&quot;。</span><br><span class="line">	</span><br><span class="line">	//插入多条数据</span><br><span class="line">	insert into 表名 values</span><br><span class="line">	(),</span><br><span class="line">	(),</span><br><span class="line">	...</span><br><span class="line">	();</span><br><span class="line">	</span><br><span class="line">	//自定义auto_increment的那一列，写为0或null则可，此处id设置了auto_increment 例如：</span><br><span class="line">	insert into xxx (id,url) values(0,&apos;http://www.baidu.com&apos;);</span><br><span class="line">	```                     </span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">- `删除`</span><br></pre></td></tr></table></figure>
-<p>   delete  from 表名 where 条件</p>
+<li><p><code>插入</code><br>   INSERT INTO table_name ( field1, field2,…fieldN )VALUES( value1, value2,…valueN ); </p>
+<p>   attention:如果数据是字符型，必须使用单引号或者双引号，如：”value”。</p>
+<p>  //插入多条数据<br>  insert into 表名 values<br>  (),<br>  (),<br>  …<br>  ();</p>
+<p>  //自定义auto_increment的那一列，写为0或null则可，此处id设置了auto_increment 例如：<br>  insert into xxx (id,url) values(0,’<a href="http://www.baidu.com&#39;)" target="_blank" rel="noopener">http://www.baidu.com&#39;)</a>;                     </p>
+</li>
+<li><p><code>删除</code></p>
+<p>  delete  from 表名 where 条件</p>
 <p>  //例如，删除students中id为3的行<br>  delete from students where id=3;</p>
 <p> //删除表中所有数据<br> delete fom students </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> `delete drop truncate`</span><br><span class="line"> 1、delete 和 truncate 仅仅删除表数据，drop 连表数据和表结构一起删除，打个比方，delete 是单杀，truncate 是团灭，drop 是把电脑摔了。</span><br><span class="line"> 2、delete 是 DML 语句，操作完以后如果没有不想提交事务还可以回滚，truncate 和 drop 是 DDL 语句，操作完马上生效，不能回滚，打个比方，delete 是发微信说分手，后悔还可以撤回，truncate 和 drop 是直接扇耳光说滚，不能反悔。</span><br><span class="line"> 3、执行的速度上，drop&gt;truncate&gt;delete，打个比方，drop 是神舟火箭，truncate 是和谐号动车，delete 是自行车。</span><br><span class="line"></span><br><span class="line">##### 数据库的导入与导出</span><br><span class="line">**`导入外部.sql文件`**</span><br><span class="line">1、 mysql 命令导入 </span><br><span class="line">&gt; mysql -u用户名    -p密码    &lt;  要导入的数据库数据(runoob.sql)</span><br><span class="line">&gt; </span><br><span class="line">实例：</span><br><span class="line">&gt; mysql -uroot -p123456 &lt; runoob.sql</span><br><span class="line"></span><br><span class="line">2、source 命令导入(常用)</span><br><span class="line">- 先登入到数据库客户端:mysql -h localhost -u root -p   </span><br><span class="line">- &gt; mysql&gt; create database abc;      # 创建数据库</span><br><span class="line">	mysql&gt; use abc;                  # 使用已创建的数据库 </span><br><span class="line">	mysql&gt; set names utf8;           # 设置编码</span><br><span class="line">	mysql&gt; source C:/Users/Administrator/Desktop/base_db.sql  # 导入备份数据库</span><br><span class="line">- `attention`</span><br><span class="line">&gt; - 计算机命令不认识\   ， 所以路径中的`\` 都要写为`/` ，否则会报错</span><br><span class="line">&gt;-  source 与路径中间有空格 ， 路径名不能有中文</span><br><span class="line">&gt;-  如果出现`\n`错误，则证明编码有问题，要进行设置</span><br><span class="line"></span><br><span class="line">**`导出SQL格式的数据`**</span><br><span class="line">- 导出指定的表</span><br><span class="line">&gt; `$mysqldump -u root -p 数据库名 表名 &gt; 指定文件`</span><br><span class="line">- 导出数据库</span><br><span class="line">&gt; `$mysqldump -u root -p 数据库名&gt;指定文件`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">### mysql与NodeJs</span><br><span class="line">1、首先安装mysql模块，`npm install mysql`</span><br><span class="line">2、连接到数据库</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>var mysql = require(‘mysql’);<br>var connection = mysql.createConnection({<br>  host     : ‘localhost’,<br>  user     : ‘root’,<br>  password : ‘123456’,//自己mysql账户的密码<br>  database : ‘test’<br>});</p>
-<p>connection.connect();</p>
-<p>//此处为查询test数据库下websites表中的所有数据，可根据具体要求进行更改<br>var sql=’SELECT * from websites’;<br>connection.query(sql, function (error, results, fields) {<br>  if (error) throw error;<br>  console.log(results);<br>});<br><code>`</code></p>
+<p> <code>delete drop truncate</code><br> 1、delete 和 truncate 仅仅删除表数据，drop 连表数据和表结构一起删除，打个比方，delete 是单杀，truncate 是团灭，drop 是把电脑摔了。<br> 2、delete 是 DML 语句，操作完以后如果没有不想提交事务还可以回滚，truncate 和 drop 是 DDL 语句，操作完马上生效，不能回滚，打个比方，delete 是发微信说分手，后悔还可以撤回，truncate 和 drop 是直接扇耳光说滚，不能反悔。<br> 3、执行的速度上，drop&gt;truncate&gt;delete，打个比方，drop 是神舟火箭，truncate 是和谐号动车，delete 是自行车。</p>
+<h5 id="数据库的导入与导出"><a href="#数据库的导入与导出" class="headerlink" title="数据库的导入与导出"></a>数据库的导入与导出</h5><p><strong><code>导入外部.sql文件</code></strong><br>1、 mysql 命令导入 </p>
+<blockquote>
+<p>mysql -u用户名    -p密码    &lt;  要导入的数据库数据(runoob.sql)</p>
+</blockquote>
+<p>实例：</p>
+<blockquote>
+<p>mysql -uroot -p123456 &lt; runoob.sql</p>
+</blockquote>
+<p>2、source 命令导入(常用)</p>
+<ul>
+<li>先登入到数据库客户端:mysql -h localhost -u root -p   </li>
+<li><blockquote>
+<p>mysql&gt; create database abc;      # 创建数据库<br>  mysql&gt; use abc;                  # 使用已创建的数据库<br>  mysql&gt; set names utf8;           # 设置编码<br>  mysql&gt; source C:/Users/Administrator/Desktop/base_db.sql  # 导入备份数据库</p>
+</blockquote>
+</li>
+<li><code>attention</code><blockquote>
+<ul>
+<li>计算机命令不认识\   ， 所以路径中的<code>\</code> 都要写为<code>/</code> ，否则会报错</li>
+<li>source 与路径中间有空格 ， 路径名不能有中文</li>
+<li>如果出现<code>\n</code>错误，则证明编码有问题，要进行设置</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><strong><code>导出SQL格式的数据</code></strong></p>
+<ul>
+<li>导出指定的表<blockquote>
+<p><code>$mysqldump -u root -p 数据库名 表名 &gt; 指定文件</code></p>
+</blockquote>
+</li>
+<li>导出数据库<blockquote>
+<p><code>$mysqldump -u root -p 数据库名&gt;指定文件</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="mysql与NodeJs"><a href="#mysql与NodeJs" class="headerlink" title="mysql与NodeJs"></a>mysql与NodeJs</h3><p>1、首先安装mysql模块，<code>npm install mysql</code><br>2、连接到数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var mysql = require(&apos;mysql&apos;);</span><br><span class="line">var connection = mysql.createConnection(&#123;</span><br><span class="line">  host     : &apos;localhost&apos;,</span><br><span class="line">  user     : &apos;root&apos;,</span><br><span class="line">  password : &apos;123456&apos;,//自己mysql账户的密码</span><br><span class="line">  database : &apos;test&apos;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">connection.connect();</span><br><span class="line"> </span><br><span class="line">//此处为查询test数据库下websites表中的所有数据，可根据具体要求进行更改</span><br><span class="line">var sql=&apos;SELECT * from websites&apos;;</span><br><span class="line">connection.query(sql, function (error, results, fields) &#123;</span><br><span class="line">  if (error) throw error;</span><br><span class="line">  console.log(results);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 
       
 
