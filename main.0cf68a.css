@@ -759,7 +759,7 @@ body {
   position: absolute;
   right: 0;
   min-height: 100%;
-  background: #b3b4b5;
+  background:linear-gradient(200deg,#a0cfe4,#e8c37e);
   left: 300px;
   width: auto
 }
@@ -807,12 +807,12 @@ body {
 }
 
 .left-col #header a:hover {
-  color: #3e21b0
+  color: #974705
 }
 
 .left-col #header .header-subtitle {
   text-align: center;
-  color: #ea1696;
+  color: #999;
   font-size: 14px;
   line-height: 25px;
   overflow: hidden;

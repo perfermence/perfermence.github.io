@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Git操作 | welcome to my Home</title>
+  <title>MySQL基本操作 | welcome to my Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Gitgit的基础知识 git是一个分布式代码管理控制系统（linux开发者开发的)  记录当前产品代码的所有版本信息（历史修改信息），而且方便快速回退到某一个具体的版本方便团队协作开发，能够检测代码冲突，能够合并代码等  其之所以是分布式，因为每个开发者的本地都是一个Git仓库 （在本地就可以生产历史版本） Git跟踪并管理的是修改，而非文件。  思考：svn和git的区别1、git是分布式，s">
-<meta name="keywords" content="工具">
+  <meta name="description" content="Mysql关于安装 下载好安装包，直接点击执行文件，一路向下安装即可这里重点提示一下环境变量的设置。123456789101112131415161718192021222324252627282930313233343536373839401、首先找到MySQL安装目录下的bin文件夹的所在路径2、打开计算机-&amp;gt;系统属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path3、在pat">
+<meta name="keywords" content="数据库 MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git操作">
-<meta property="og:url" content="http://yoursite.com/2019/05/17/git/index.html">
+<meta property="og:title" content="MySQL基本操作">
+<meta property="og:url" content="http://yoursite.com/2019/05/19/MySQL/index.html">
 <meta property="og:site_name" content="welcome to my Home">
-<meta property="og:description" content="Gitgit的基础知识 git是一个分布式代码管理控制系统（linux开发者开发的)  记录当前产品代码的所有版本信息（历史修改信息），而且方便快速回退到某一个具体的版本方便团队协作开发，能够检测代码冲突，能够合并代码等  其之所以是分布式，因为每个开发者的本地都是一个Git仓库 （在本地就可以生产历史版本） Git跟踪并管理的是修改，而非文件。  思考：svn和git的区别1、git是分布式，s">
+<meta property="og:description" content="Mysql关于安装 下载好安装包，直接点击执行文件，一路向下安装即可这里重点提示一下环境变量的设置。123456789101112131415161718192021222324252627282930313233343536373839401、首先找到MySQL安装目录下的bin文件夹的所在路径2、打开计算机-&amp;gt;系统属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path3、在pat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-09T01:04:26.110Z">
+<meta property="og:updated_time" content="2019-06-09T01:02:55.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git操作">
-<meta name="twitter:description" content="Gitgit的基础知识 git是一个分布式代码管理控制系统（linux开发者开发的)  记录当前产品代码的所有版本信息（历史修改信息），而且方便快速回退到某一个具体的版本方便团队协作开发，能够检测代码冲突，能够合并代码等  其之所以是分布式，因为每个开发者的本地都是一个Git仓库 （在本地就可以生产历史版本） Git跟踪并管理的是修改，而非文件。  思考：svn和git的区别1、git是分布式，s">
+<meta name="twitter:title" content="MySQL基本操作">
+<meta name="twitter:description" content="Mysql关于安装 下载好安装包，直接点击执行文件，一路向下安装即可这里重点提示一下环境变量的设置。123456789101112131415161718192021222324252627282930313233343536373839401、首先找到MySQL安装目录下的bin文件夹的所在路径2、打开计算机-&amp;gt;系统属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path3、在pat">
   
     <link rel="alternative" href="/atom.xml" title="welcome to my Home" type="application/atom+xml">
   
@@ -149,170 +149,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git操作
+      MySQL基本操作
     </h1>
   
 
         
-        <a href="/2019/05/17/git/" class="archive-article-date">
-  	<time datetime="2019-05-17T05:50:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
+        <a href="/2019/05/19/MySQL/" class="archive-article-date">
+  	<time datetime="2019-05-19T07:50:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="git的基础知识"><a href="#git的基础知识" class="headerlink" title="git的基础知识"></a>git的基础知识</h3><ul>
-<li>git是一个分布式代码管理控制系统（linux开发者开发的) </li>
-<li>记录当前产品代码的所有版本信息（历史修改信息），而且方便快速回退到某一个具体的版本方便团队协作开发，能够检测代码冲突，能够合并代码等 </li>
-<li>其之所以是分布式，因为每个开发者的本地都是一个Git仓库 （在本地就可以生产历史版本）</li>
-<li><p>Git跟踪并管理的是修改，而非文件。</p>
-</li>
-<li><p>思考：svn和git的区别<br>1、git是分布式，svn是集中式<br>2、传输方式的区别，git更加快一点<br>msysgit 是Windows下的git版本<br>下载网址：<a href="https://git-scm.comgit" target="_blank">https://git-scm.comgit</a></p>
-</li>
-</ul>
-<h4 id="git基础操作"><a href="#git基础操作" class="headerlink" title="git基础操作"></a>git基础操作</h4><p><code>如何在电脑本地创建git仓库，管理我们的代码</code></p>
-<ul>
-<li><p>初次使用git，我们先在本地配置一些基础信息 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config –global user.name xxx </span><br><span class="line">$ git config –global user.email xxx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>建议大家配置的用户名和邮箱和GitHub保持一致，这样以后在本地向GitHub推送内容的时候，能够展示出是谁推荐的</p>
-</li>
-</ul>
-<p><code>git init:创建仓库</code></p>
-<blockquote>
-<p><code>仓库</code>又名版本库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">会在当前目录中创建一个空的仓库，文件目录中生成一个“.git”的隐藏文件，这个文件很重要，我们本地仓库的版本信息等都存储在这里</span><br></pre></td></tr></table></figure></p>
+        <h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h3 id="关于安装"><a href="#关于安装" class="headerlink" title="关于安装"></a>关于安装</h3><blockquote>
+<p>下载好安装包，直接点击执行文件，一路向下安装即可<br>这里重点提示一下环境变量的设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1、首先找到MySQL安装目录下的bin文件夹的所在路径</span><br><span class="line">2、打开计算机-&gt;系统属性-&gt;高级系统设置-&gt;环境变量-&gt;path</span><br><span class="line">3、在path一栏添加，记得在前一项后面加上英文状态下的分号</span><br><span class="line">4、设置好后关闭命令窗口，重新进入，输入mysql则可进入mysql操作。</span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line">;C:\Program Files (x86)\MySQL\MySQL Server 5.0\bin</span><br><span class="line">``` </span><br><span class="line">`进入mysql`</span><br><span class="line">&gt; - 在cmd中：`mysql -h localhost -u root -p`   然后输入密码</span><br><span class="line">&gt; - 直接打开MySQL Command Line  Client 输入密码即可</span><br><span class="line"></span><br><span class="line">### mysql重启</span><br><span class="line">&gt; 为什么要重启：配置过配置文件以后，需要重新启动才生效</span><br><span class="line">&gt; 打开cmd: net start mysql</span><br><span class="line">&gt; 关闭mysql服务：net stop mysql</span><br><span class="line">&gt; 关于配置：字符乱码问题，如果不在创建数据库或者数据表时指定编码格式，那么就采取默认的编码格式latin，此时我们可以在my.ini文件中设置MySQL 下的charset为:gbk 避免中文乱码问题</span><br><span class="line">![Alt text](./1559479723774.png)</span><br><span class="line"></span><br><span class="line">&gt; show variables like &apos;%char%&apos;; 可查看现有的默认编码格式</span><br><span class="line">![Alt text](./1559479672773.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### SQL语句</span><br><span class="line">**`注意`**：SQL语句都要以分号结尾，代表这条语句结束，否则将继续输入。</span><br><span class="line">#### 数据库</span><br><span class="line">##### 基本操作语句</span><br><span class="line">- 查看当前时间  `select now();`</span><br><span class="line">- 查看数据库版本 	`select version();`</span><br><span class="line">- 显示所有数据库  	`show databases;`</span><br><span class="line">- 查询正在使用的数据库 `select database();`</span><br><span class="line">- 创建数据库 	`create database 数据库名;` 也可顺带设置编码格式 `create database 数据库名 charset=utf8;` </span><br><span class="line">- 怎么创建数据库的(关于编码格式等消息)  `show create database 数据库名;`</span><br><span class="line">- 删除数据库 `drop database xxx;`</span><br><span class="line">- 设置编码格式  `set names utf8;` ，出现中文乱码，可选用gbk</span><br><span class="line"></span><br><span class="line">##### 数据表的操作</span><br><span class="line">1、创建表</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><code>.gitignore</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在当前目录（git仓库根目录）创建一个“.gitignore”文件，这个文件中存储了当git提交的时候所忽略的文件</span><br><span class="line"></span><br><span class="line">可以基于Linux命令$ touch .gitignore(Mac终端，git bash、或者集成了Linux的DOS，可以使用Linux命令)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>当我们在本地创建一个git仓库后，我们可以基于这个仓库管理我们的代码 </p>
-</blockquote>
-<p><strong><code>git 工作流程</code></strong><br>每一个仓库都划分为三个区域</p>
-<ul>
-<li><p>工作区：编辑代码的地方 </p>
-<blockquote>
-<p>就是你在电脑里能看到的目录，比如我们创建的文件夹就是一个工作区。</p>
-</blockquote>
-</li>
-<li><p>暂存区：临时存储要生成代码的地方</p>
-<blockquote>
-<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
-</blockquote>
-</li>
-<li>历史区：存储的是生成的每一个历史版本，可以从历史区回退到某一个具体版本的代码，用代码覆盖工作区的代码</li>
-</ul>
-<p><strong><code>从工作区-&gt;暂存区</code></strong><br> $ git status :<br>查看代码或者文件的状态（当前处于哪个区域）：</p>
-<ul>
-<li><code>红色</code>（当前处于工作区，还没有提交到暂存区）</li>
-<li><code>绿色</code>（当前处于暂存区，还没有提交到历史区）</li>
-<li>如果没有文件，代表三个区域代码已经同步（即三个区域都有代码，保持同步），历史版本也在历史区生成了. 工作区提交到暂存区，暂存区提交到历史区<br><strong><code>重点</code></strong>：暂存区始终是存放提交的内容，并没有消失，以后工作区内容修改，会和暂存区作对比，依次来判断哪些是新处理的</li>
-</ul>
-<p><strong><code>常用操作命令</code></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//工作区-&gt;暂存区（把当前工作区中所有最新修改的文件，都提交到暂存区（不包括删除的））</span><br><span class="line">$ git add . /$ git add -A:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">暂存区提交到历史区</span><br><span class="line">$ git commit:这样执行后，会弹出一个提交文本输入界面，需要我们编写本次提交到历史区给当前版本编写的备注信息</span><br><span class="line">先按 i 进入编辑插入模式-&gt;输备注信息-&gt;按ESC-&gt;输入”: wq” (保存并退出) </span><br><span class="line">$ git commit -m &apos;自己需要备注的信息&apos;提交信息 </span><br><span class="line"></span><br><span class="line">$ git log:查看提交记录</span><br><span class="line">git log --pretty=oneline 每条记录只在一行显示</span><br></pre></td></tr></table></figure></p>
-<p><code>查看每个区代码的区别</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git diff:工作区与暂存区的区别 </span><br><span class="line">$ git diff master:工作区与历史区区别（master 分支） </span><br><span class="line">$ git diff --cached:暂存区与历史区区别</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><ul>
-<li>版本回退指的是让工作区回退到指定版本</li>
-<li>首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本,也就是最新的提交</li>
-<li>上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</li>
-<li>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD重指向指定的版本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ cat readme.txt  查看readme文件</span><br><span class="line"></span><br><span class="line">//回退到上一个历史版本</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line"></span><br><span class="line">//返悔想回到新版本</span><br><span class="line">git reset --hard 14dbd（新版本commit id ）</span><br><span class="line"></span><br><span class="line">//找不到新版本提交id怎么办</span><br><span class="line">git reflog 记录所有提交记录</span><br><span class="line"></span><br><span class="line">//在回退到历史版本之前，可用git log查看提交历史，以便确定回到哪个版本</span><br><span class="line">git reset --hard commit_id</span><br><span class="line"></span><br><span class="line">//要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="撤销修改与删除文件"><a href="#撤销修改与删除文件" class="headerlink" title="撤销修改与删除文件"></a>撤销修改与删除文件</h4><blockquote>
-<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<br><code>git checkout -- file 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以还原</code></p>
-<blockquote>
-<ul>
-<li>从来没有被添加到版本库就被删除的文件，是无法恢复的！</li>
-<li>你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</li>
-</ul>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><code>删除文件：git rm file</code></p>
-</blockquote>
-<blockquote>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步</p>
-<ul>
-<li>第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1</li>
-<li>第二步按场景1操作。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交,则用版本回退到上一个版本 <code>git reset --hard 版本</code></p>
-</blockquote>
-<h3 id="git-和-GitHub（中央仓库）同步"><a href="#git-和-GitHub（中央仓库）同步" class="headerlink" title="git 和 GitHub（中央仓库）同步"></a>git 和 GitHub（中央仓库）同步</h3><p>1、让本地的git仓库和远程仓库建立关联<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v:查看所有的关联信息 </span><br><span class="line">$ git remote add origin [远程仓库git地址]:建立关联 </span><br><span class="line">$ git remote remove xxx:移除关联 </span><br><span class="line">我们与远程仓库关联在一起的名字默认是:origin，当然也可以自己随意修改</span><br></pre></td></tr></table></figure></p>
-<p>2、把本地信息推送到远程仓库上，或者从远程仓库上拉取最新的消息到本地仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">我们本地推送和拉取的信息，既有代码也有版本信息，所以说与其说是推送和拉取，不如说是和远程仓库保持信息的同步</span><br><span class="line"></span><br><span class="line">在推送之前，我们都应该先拉取 </span><br><span class="line">$ git pull origin（这个名字就是远程仓库关联的这个名字，以自己设置的为主） master:从远程仓库的master分支拉取最新的信息</span><br><span class="line"></span><br><span class="line">$ git push origin master </span><br><span class="line">把自己本地信息推送到远程仓库的master分支下</span><br><span class="line"></span><br><span class="line">如果名字是orgin，分支走的也是master分支，后面都可以不用写，也就是执行$ git pull/git push(但是这得是在第一次先执行一个操作：) </span><br><span class="line">在推送之前，要先把信息加到历史区，并先pull</span><br></pre></td></tr></table></figure></p>
-<p>3、以上是操作知识点，真实项目开发流程如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">leader 会首先创建一个远程仓库（这个仓库可能是空的，也可能是包含了项目需要的基础的结构信息） </span><br><span class="line">作为开发者，我们需要在本地创建一个本地仓库，还需要让当前本地的仓库和远程仓库保持关联 </span><br><span class="line">原始做法：git init—-&gt;git remote add origin[GIT 仓库地址]</span><br><span class="line"></span><br><span class="line">简单做法： </span><br><span class="line">git clone [远程仓库地址][克隆后的名字：可以不设置，默认是仓库名]</span><br><span class="line"></span><br><span class="line">Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</span><br></pre></td></tr></table></figure></p>
-<p>4、在本地开发产品，需要同步的时候，我们首先把工作区内容在本地仓库中放到历史区，生成版本信息（git add./git commit -m）,再把本地历史区的信息推送到远程仓库上（git pull/git push）</p>
-<p>5、在团队协作开发的时候，leader会在自己的GitHub账号下创建一个远程仓库，那么团队其他成员在向这个远程仓库推送信息的时候，用自己的账号是没有推送权限的，我们需要把当前这个远程仓库，在GitHub中创建工作群组，让更多的人用自己的账号也有权限推送</p>
-<h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><h5 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h5><blockquote>
-<p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。<br>当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上</p>
-<ul>
-<li><code>常用命令</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看分支：git branch</span><br><span class="line"></span><br><span class="line">创建分支：git branch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">切换分支：git checkout &lt;name&gt;</span><br><span class="line"></span><br><span class="line">创建+切换分支：git checkout -b &lt;name&gt;</span><br><span class="line"></span><br><span class="line">合并某分支到当前分支：git merge &lt;name&gt;</span><br><span class="line"></span><br><span class="line">删除分支：git branch -d &lt;name&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<h5 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h5><blockquote>
-<p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p>
-</blockquote>
-<blockquote>
-<p>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</p>
-</blockquote>
-<blockquote>
-<p>用<code>git log --graph</code>命令可以看到分支合并图。<br><code>git log --graph --pretty=oneline --abbrev-commit</code></p>
-</blockquote>
-<h5 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h5><blockquote>
-<p>通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。</p>
-</blockquote>
-<blockquote>
-<p>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git merge --no-ff -m &quot;merge with no-ff&quot; dev</span><br><span class="line">//合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
-<p>首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
-<p>那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；</p>
-<p>你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。</p>
-<h5 id="bug分支"><a href="#bug分支" class="headerlink" title="bug分支"></a>bug分支</h5><blockquote>
-<p>当要修复bug时，手头工作没完成不能提交到版本库时，可以这样处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//把当前工作现场“储藏”起来，等以后恢复现场继续工作</span><br><span class="line">git stash  </span><br><span class="line"></span><br><span class="line">//查看储藏的工作</span><br><span class="line">git stash list </span><br><span class="line"></span><br><span class="line">//恢复工作现场</span><br><span class="line">git stash apply 恢复后需要再删除stash中的内容  git stash drop</span><br><span class="line"></span><br><span class="line">git stash pop 直接恢复且删除了stash中的内容</span><br><span class="line"></span><br><span class="line">//恢复指定的工作现场</span><br><span class="line">git stash apply stash@&#123;0&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h5 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h5><blockquote>
-<p>添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</p>
-<ul>
-<li>开发一个新feature，最好新建一个分支；</li>
-</ul>
-</blockquote>
-<ul>
-<li>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</li>
-</ul>
-<h5 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h5><p><code>推送分支</code></p>
-<blockquote>
-<p>git  push origin 分支名<br>不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">master分支是主分支，因此要时刻与远程同步；</span><br><span class="line"></span><br><span class="line">dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</span><br><span class="line"></span><br><span class="line">bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</span><br><span class="line"></span><br><span class="line">feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//在本地创建和远程分支对应的分支，本地和远程分支的名称最好一致</span><br><span class="line">git checkout -b branch-name origin/branch-name</span><br><span class="line"></span><br><span class="line">//建立本地分支和远程分支的关联</span><br><span class="line">git branch --set-upstream branch-name origin/branch-name；</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>因此，多人协作的工作模式通常是这样：</p>
-<ul>
-<li>首先，可以试图用git push origin <branch-name>推送自己的修改；</branch-name></li>
-<li>如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并</li>
-<li>如果合并有冲突，则解决冲突，并在本地提交；</li>
-<li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li>
-<li>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</li>
-</ul>
-</blockquote>
-<h5 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h5><ul>
-<li>命令<code>git tag &lt;tagname&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
-<li>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</li>
-<li>命令<code>git tag</code>可以查看所有标签</li>
-<li>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</li>
-<li>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</li>
-<li>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</li>
-<li>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</li>
-</ul>
+<p>//通用语法<br>//CREATE TABLE table_name (column_name column_type);<br>create table xxx(<br>    id int AUTO_INCREMENT primary key,<br>    name varchar(30),<br>    age tinyint unsigned default 0,<br>    high decimal(5,2),<br>    gender enuml (‘男’,’女’) default “保密”<br>);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- 删除表 `drop table xxx;`</span><br><span class="line">- 查看创建数据表的方式 `show create table xxx`</span><br><span class="line">- 查看表的相关信息 `describe 表名`   可简写为desc</span><br><span class="line">- `查询语句`</span><br><span class="line">	limit m,n 起始下标m，n为count即从起始位开始需要获取n个</span><br><span class="line">	offset  偏移量</span><br></pre></td></tr></table></figure></p>
+<pre><code>    1.通用语句
+    SELECT column_name,column_name
+    FROM table_name
+    [WHERE Clause]
+    [LIMIT m,n][ OFFSET M]
+
+    2.查询所有
+    select * from 表名    
+
+    3.where....like
+    //此处为查询以java开头的信息
+    SELECT * FROM position WHERE name LIKE &apos;java%&apos;;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">like 匹配/模糊匹配，会与 % 和 _ 结合使用。</span><br></pre></td></tr></table></figure>
+
+  &apos;%a&apos;     //以a结尾的数据
+    &apos;a%&apos;     //以a开头的数据
+    &apos;%a%&apos;    //含有a的数据
+    &apos;_a_&apos;    //三位且中间字母是a的
+    &apos;_a&apos;     //两位且结尾字母是a的
+    &apos;a_&apos;     //两位且开头字母是a的
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- `更新语句`</span><br></pre></td></tr></table></figure>
+
+//通用语句
+    UPDATE table_name SET field1=new-value1, field2=new-value2
+[WHERE Clause]
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- `插入`</span><br></pre></td></tr></table></figure>
+
+ INSERT INTO table_name ( field1, field2,...fieldN )VALUES( value1, value2,...valueN ); 
+
+ attention:如果数据是字符型，必须使用单引号或者双引号，如：&quot;value&quot;。
+
+//插入多条数据
+insert into 表名 values
+(),
+(),
+...
+();
+
+//自定义auto_increment的那一列，写为0或null则可，此处id设置了auto_increment 例如：
+insert into xxx (id,url) values(0,&apos;http://www.baidu.com&apos;);
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line"></span><br><span class="line">- `删除`</span><br></pre></td></tr></table></figure>
+
+ delete  from 表名 where 条件
+
+//例如，删除students中id为3的行
+delete from students where id=3;
+</code></pre><p>   //删除表中所有数据<br>   delete fom students<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> `delete drop truncate`</span><br><span class="line"> 1、delete 和 truncate 仅仅删除表数据，drop 连表数据和表结构一起删除，打个比方，delete 是单杀，truncate 是团灭，drop 是把电脑摔了。</span><br><span class="line"> 2、delete 是 DML 语句，操作完以后如果没有不想提交事务还可以回滚，truncate 和 drop 是 DDL 语句，操作完马上生效，不能回滚，打个比方，delete 是发微信说分手，后悔还可以撤回，truncate 和 drop 是直接扇耳光说滚，不能反悔。</span><br><span class="line"> 3、执行的速度上，drop&gt;truncate&gt;delete，打个比方，drop 是神舟火箭，truncate 是和谐号动车，delete 是自行车。</span><br><span class="line"></span><br><span class="line">##### 数据库的导入与导出</span><br><span class="line">**`导入外部.sql文件`**</span><br><span class="line">1、 mysql 命令导入 </span><br><span class="line">&gt; mysql -u用户名    -p密码    &lt;  要导入的数据库数据(runoob.sql)</span><br><span class="line">&gt; </span><br><span class="line">实例：</span><br><span class="line">&gt; mysql -uroot -p123456 &lt; runoob.sql</span><br><span class="line"></span><br><span class="line">2、source 命令导入(常用)</span><br><span class="line">- 先登入到数据库客户端:mysql -h localhost -u root -p   </span><br><span class="line">- &gt; mysql&gt; create database abc;      # 创建数据库</span><br><span class="line">	mysql&gt; use abc;                  # 使用已创建的数据库 </span><br><span class="line">	mysql&gt; set names utf8;           # 设置编码</span><br><span class="line">	mysql&gt; source C:/Users/Administrator/Desktop/base_db.sql  # 导入备份数据库</span><br><span class="line">- `attention`</span><br><span class="line">&gt; - 计算机命令不认识\   ， 所以路径中的`\` 都要写为`/` ，否则会报错</span><br><span class="line">&gt;-  source 与路径中间有空格 ， 路径名不能有中文</span><br><span class="line">&gt;-  如果出现`\n`错误，则证明编码有问题，要进行设置</span><br><span class="line"></span><br><span class="line">**`导出SQL格式的数据`**</span><br><span class="line">- 导出指定的表</span><br><span class="line">&gt; `$mysqldump -u root -p 数据库名 表名 &gt; 指定文件`</span><br><span class="line">- 导出数据库</span><br><span class="line">&gt; `$mysqldump -u root -p 数据库名&gt;指定文件`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">### mysql与NodeJs</span><br><span class="line">1、首先安装mysql模块，`npm install mysql`</span><br><span class="line">2、连接到数据库</span><br></pre></td></tr></table></figure></p>
+<p>var mysql = require(‘mysql’);<br>var connection = mysql.createConnection({<br>  host     : ‘localhost’,<br>  user     : ‘root’,<br>  password : ‘123456’,//自己mysql账户的密码<br>  database : ‘test’<br>});</p>
+<p>connection.connect();</p>
+<p>//此处为查询test数据库下websites表中的所有数据，可根据具体要求进行更改<br>var sql=’SELECT * from websites’;<br>connection.query(sql, function (error, results, fields) {<br>  if (error) throw error;<br>  console.log(results);<br>});<br><code>`</code></p>
 
       
 
@@ -326,7 +236,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据库 MySQL</a>
         		</li>
       		
 		</ul>
@@ -382,7 +292,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/17/git/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/19/MySQL/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -396,18 +306,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/19/MySQL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL基本操作
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/03/DOM/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">DOM相关知识点</div>
+    <a href="/2019/05/17/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -446,7 +347,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/05/17/git/",
+  id: "http://yoursite.com/2019/05/19/MySQL/",
   owner: 'perfermence',
   repo: 'perfermence.github.io',
   oauth: {
