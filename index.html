@@ -204,21 +204,27 @@
 <li>查看创建数据表的方式 <code>show create table xxx</code></li>
 <li>查看表的相关信息 <code>describe 表名</code>   可简写为desc</li>
 <li><p><code>查询语句</code><br>  limit m,n 起始下标m，n为count即从起始位开始需要获取n个<br>  offset  偏移量</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.通用语句</span><br><span class="line">SELECT column_name,column_name</span><br><span class="line">FROM table_name</span><br><span class="line">[WHERE Clause]</span><br><span class="line">[LIMIT m,n][ OFFSET M]</span><br><span class="line"></span><br><span class="line">2.查询所有</span><br><span class="line">select * from 表名	</span><br><span class="line"></span><br><span class="line">3.where....like</span><br><span class="line">//此处为查询以java开头的信息</span><br><span class="line">SELECT * FROM position WHERE name LIKE &apos;java%&apos;;</span><br></pre></td></tr></table></figure>
-<p>  like 匹配/模糊匹配，会与 % 和 _ 结合使用。</p>
+<pre><code>1.通用语句
+SELECT column_name,column_name
+FROM table_name
+[WHERE Clause]
+[LIMIT m,n][ OFFSET M]
+
+2.查询所有
+select * from 表名    
+
+3.where....like
+//此处为查询以java开头的信息
+SELECT * FROM position WHERE name LIKE &apos;java%&apos;
+</code></pre><p>  like 匹配/模糊匹配，会与 % 和 _ 结合使用。</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> &apos;%a&apos;     //以a结尾的数据</span><br><span class="line">&apos;a%&apos;     //以a开头的数据</span><br><span class="line">&apos;%a%&apos;    //含有a的数据</span><br><span class="line">&apos;_a_&apos;    //三位且中间字母是a的</span><br><span class="line">&apos;_a&apos;     //两位且结尾字母是a的</span><br><span class="line">&apos;a_&apos;     //两位且开头字母是a的</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>更新语句</code></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//通用语句</span><br><span class="line">	UPDATE table_name SET field1=new-value1, field2=new-value2</span><br><span class="line">[WHERE Clause]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>插入</code><br>   INSERT INTO table_name ( field1, field2,…fieldN )VALUES( value1, value2,…valueN ); </p>
-<p>   attention:如果数据是字符型，必须使用单引号或者双引号，如：”value”。</p>
-<p>  //插入多条数据<br>  insert into 表名 values<br>  (),<br>  (),<br>  …<br>  ();</p>
-<p>  //自定义auto_increment的那一列，写为0或null则可，此处id设置了auto_increment 例如：<br>  insert into xxx (id,url) values(0,’<a href="http://www.baidu.com&#39;)" target="_blank" rel="noopener">http://www.baidu.com&#39;)</a>;                     </p>
+<li><p><code>插入</code><br>   INSERT INTO table_name ( field1, field2,…fieldN )VALUES( value1, value2,…valueN );<br>   attention:如果数据是字符型，必须使用单引号或者双引号，如：”value”。<br>  插入多条数据<br>  insert into 表名 values<br>  (),<br>  (),<br>  …<br>  ();<br>  自定义auto_increment的那一列，写为0或null则可，此处id设置了auto_increment 例如：<br>  insert into xxx (id,url) values(0,’<a href="http://www.baidu.com&#39;)" target="_blank" rel="noopener">http://www.baidu.com&#39;)</a>;                     </p>
 </li>
-<li><p><code>删除</code></p>
-<p>  delete  from 表名 where 条件</p>
-<p>  //例如，删除students中id为3的行<br>  delete from students where id=3;</p>
+<li><p><code>删除</code><br>delete  from 表名 where 条件<br>  //例如，删除students中id为3的行<br>  delete from students where id=3;</p>
 <p> //删除表中所有数据<br> delete fom students </p>
 </li>
 </ul>
