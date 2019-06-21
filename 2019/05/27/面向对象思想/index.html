@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数组的基本方法 | welcome to my Home</title>
+  <title>JS中的设计模式 | welcome to my Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数组基础知识数组基础结构和遍历 数组也是对象类型的 typeOf [] -&amp;gt; &amp;#39;object&amp;#39;数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度   类数组：类似于数组但不是数组1、通过getElementsByTagName获取的元素集合是类数组2、函数中的实参集合arguments也是">
-<meta name="keywords" content="javascript,Array">
+  <meta name="description" content="面向对象编程OOP Object Oriented Programming 单例设计模式（Singleton Pattern）1、表现形式：1234var obj=&amp;#123;xxx:xxx,.....&amp;#125;; 2、作用：把描述同一事物的属性和特征进行“分组、归类”（存储在同一个堆内存空间中），因此避免了全局变量之间的冲突和污染12var pattern1=&amp;#123;name:&amp;apos;">
+<meta name="keywords" content="javascript,面向对象编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组的基本方法">
-<meta property="og:url" content="http://yoursite.com/2019/04/30/数组/index.html">
+<meta property="og:title" content="JS中的设计模式">
+<meta property="og:url" content="http://yoursite.com/2019/05/27/面向对象思想/index.html">
 <meta property="og:site_name" content="welcome to my Home">
-<meta property="og:description" content="数组基础知识数组基础结构和遍历 数组也是对象类型的 typeOf [] -&amp;gt; &amp;#39;object&amp;#39;数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度   类数组：类似于数组但不是数组1、通过getElementsByTagName获取的元素集合是类数组2、函数中的实参集合arguments也是">
+<meta property="og:description" content="面向对象编程OOP Object Oriented Programming 单例设计模式（Singleton Pattern）1、表现形式：1234var obj=&amp;#123;xxx:xxx,.....&amp;#125;; 2、作用：把描述同一事物的属性和特征进行“分组、归类”（存储在同一个堆内存空间中），因此避免了全局变量之间的冲突和污染12var pattern1=&amp;#123;name:&amp;apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-16T00:51:23.589Z">
+<meta property="og:updated_time" content="2019-06-21T07:46:59.905Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组的基本方法">
-<meta name="twitter:description" content="数组基础知识数组基础结构和遍历 数组也是对象类型的 typeOf [] -&amp;gt; &amp;#39;object&amp;#39;数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度   类数组：类似于数组但不是数组1、通过getElementsByTagName获取的元素集合是类数组2、函数中的实参集合arguments也是">
+<meta name="twitter:title" content="JS中的设计模式">
+<meta name="twitter:description" content="面向对象编程OOP Object Oriented Programming 单例设计模式（Singleton Pattern）1、表现形式：1234var obj=&amp;#123;xxx:xxx,.....&amp;#125;; 2、作用：把描述同一事物的属性和特征进行“分组、归类”（存储在同一个堆内存空间中），因此避免了全局变量之间的冲突和污染12var pattern1=&amp;#123;name:&amp;apos;">
   
     <link rel="alternative" href="/atom.xml" title="welcome to my Home" type="application/atom+xml">
   
@@ -149,126 +149,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数组" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-面向对象思想" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数组的基本方法
+      JS中的设计模式
     </h1>
   
 
         
-        <a href="/2019/04/30/数组/" class="archive-article-date">
-  	<time datetime="2019-04-30T11:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
+        <a href="/2019/05/27/面向对象思想/" class="archive-article-date">
+  	<time datetime="2019-05-27T07:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="数组基础知识"><a href="#数组基础知识" class="headerlink" title="数组基础知识"></a>数组基础知识</h3><h4 id="数组基础结构和遍历"><a href="#数组基础结构和遍历" class="headerlink" title="数组基础结构和遍历"></a>数组基础结构和遍历</h4><blockquote>
-<p>数组也是对象类型的 <code>typeOf [] -&gt; &#39;object&#39;</code><br>数组也有属性名，只不过属性名是数字，我们把数字属性名称为它的索引：数组是以数字作为索引，索引从零开始。有一个length属性代表属性的长度</p>
-</blockquote>
+        <h3 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h3><p>OOP Object Oriented Programming</p>
+<h4 id="单例设计模式（Singleton-Pattern）"><a href="#单例设计模式（Singleton-Pattern）" class="headerlink" title="单例设计模式（Singleton Pattern）"></a>单例设计模式（Singleton Pattern）</h4><p>1、表现形式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj=&#123;</span><br><span class="line">xxx:xxx,</span><br><span class="line">.....</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>2、作用：把描述同一事物的属性和特征进行“分组、归类”（存储在同一个堆内存空间中），因此避免了全局变量之间的冲突和污染<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var pattern1=&#123;name:&apos;xxx&apos;&#125;;</span><br><span class="line">var pattern1=&#123;name:&apos;xxx&apos;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>在单例设计模型中，OBJ不仅仅是对象名，它被称为“命名空间[NameSpace]”，把描述事务的属性存放到命名空间中，多个命名空间是独立分开的，互不冲突。 </p>
+<p>3、单例设计模式命名的由来：每一个命名空间都是JS中Object这个内置基类的实例，而实例之间是相互独立互不干扰的，所以我们称它为“单例：单独的实例”<br>高级单例模式：在给命名空间赋值的时候，不是直接赋值一个对象，而是先执行匿名函数，形成一个私有作用域AA（不销毁的栈内存），在AA中创建一个堆内存，把堆内存地址赋值给命名空间<br>这种模式的好处：我们可以在AA中创建很多内容（变量或函数），哪些需要供外面调取使用的，我们暴露到返回的对象中（模块化使用的一种思想）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var nameSpace=(function()&#123;</span><br><span class="line">    var n=12;</span><br><span class="line">    function fn()&#123;</span><br><span class="line">        //...</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">        fn:fn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<h4 id="实战项目中的模块化"><a href="#实战项目中的模块化" class="headerlink" title="实战项目中的模块化"></a>实战项目中的模块化</h4><p><code>模块化开发</code>：<br>    &gt; 1、团队协作开发的时候会把产品按照功能板块进行划分，每一个功能板块或者模块有专人负责开发<br>    &gt; 2、把各个板块之间公用的部分进行提取封装，后期再想实现这些功能，直接的调取引用即可（模块封装）</p>
+<p><code>工厂模式（Factory Pattern）</code><br>1、把实现相同功能的代码进行封装，以此来实现“批量生产”（后期想要实现这个功能，我们只需要执行函数即可）<br>2、“低耦合高内聚”：减少页面中的冗余代码，提高代码的重复使用率</p>
+<h4 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h4><p>1、JS是一门编程语言（具备自己的编程思想）<br>[面向对象]<br>JS JAVA PHP C# RUBY PYTHON C++<br>[面向过程]<br>C<br>2、面向对象编程，需要我们掌握：“类、对象、实例”的案例<br><strong><code>对象</code></strong></p>
 <blockquote>
-<p>类数组：类似于数组但不是数组<br>1、通过getElementsByTagName获取的元素集合是类数组<br>2、函数中的实参集合arguments也是类数组</p>
+<p>万物皆对象</p>
 </blockquote>
-<h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法"></a>数组中的常用方法</h4><blockquote>
-<p><code>console.dir(Array.prototype)</code>:查看数组中的方法<br>记忆维度</p>
-<ul>
-<li>1、方法的意义和作用</li>
-<li>2、方法的形参</li>
-<li>3、方法的返回值</li>
-<li>4、通过此方法，原来的数组是否发生了变化</li>
-</ul>
-</blockquote>
-<p><code>数组的增加、修改、删除</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var ary = [12,23,34];</span><br><span class="line">//=&gt;增加</span><br><span class="line">//=&gt;1、push：向数组的末尾追加新内容</span><br><span class="line">//=&gt;2、unshift:向数组开头追加新元素</span><br><span class="line">//=&gt;3、把它当做一个普通对象来操作：使用对象键值对操作，给其设置新的属性（索引）：ary[ary.length]=xxx，向数组末尾追加了新的内容</span><br><span class="line"></span><br><span class="line">//=&gt;删除</span><br><span class="line">//=&gt;1、pop：删除数组最后一项</span><br><span class="line">//=&gt;2、shift：删除数组第一项</span><br><span class="line">//=&gt;3、delete：把数组当做普通对象操作，delete ary[索引]：删除指定索引这一项（当前项被删除后，原有数组其他项的索引不会改变，当前数组的length也不会改变：不推荐使用）</span><br><span class="line">//=&gt;4、ary.length--:删除数组最后一项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//=&gt;修改</span><br><span class="line">//=&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>push</code></p>
+<p><strong><code>类</code></strong></p>
 <blockquote>
-<p>向数组末尾追加新内容<br>参数：一到多个，任何数据类型都可以，要给数组末尾追加什么，直接传递到push方法中即可，传递多个用逗号隔开<br>返回值：新增后数组的长度<br>原有数组改变了</p>
+<p>对象的具体细分（按照功能特点进行分类：大类、小类）</p>
 </blockquote>
-<p><code>unshift</code></p>
+<p><strong><code>实例</code></strong></p>
 <blockquote>
-<p>向数组开头追加新元素<br>参数：需要追加的内容（可以是多个任何数据类型的值）<br>返回值：新增后数组的长度<br>原来数组改变了</p>
+<p>类中具体的一个事物（拿出类别中的具体一个实例进行研究，那么当前类别下的其他实例也具备这些特点和特征）<br>整个JS就是基于面向对象设计和开发出来的语言，我们学习和实战的时候也要按照面向对象的思想去体会和理解</p>
 </blockquote>
-<p><code>pop</code></p>
+<p>JS中的内置类<br>构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    基于构造函数创建自定义类（constructor）</span><br><span class="line">    1、在普通函数执行的基础上“new xxx()”，这样就不是普通函数执行了，</span><br><span class="line">    而是构造函数执行，当前的函数名称之为“类名”，</span><br><span class="line">    接受的返回结果是当前类的一个实例</span><br><span class="line">    2、自己创建的类名，最好第一个单词首字母大写</span><br><span class="line">    3、这种构造函数设计模式执行，主要用于组件、类库、插件、框架等的封装，</span><br><span class="line">    平时编写业务逻辑一般不这样处理</span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line">function Fn()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var f = new Fn();//=&gt;Fn是类  f是类的一个实例</span><br><span class="line"></span><br><span class="line">var obj1=&#123;&#125;;//=&gt;obj1是Object对象的一个实例</span><br><span class="line">var obj2=&#123;&#125;;//=&gt;obj2是Object对象的一个实例</span><br><span class="line"></span><br><span class="line">/*JS中创建值有两种方式</span><br><span class="line">    1、字面量表达式</span><br><span class="line">    2、构造函数模式</span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line">var obj=&#123;&#125;;//=&gt;字面量方式</span><br><span class="line">var obj=new Object();//=&gt;构造函数模式</span><br><span class="line">//不管是哪一种方式创造出来的都是Object类的实例，而实例之间是独立分开的，所以var</span><br><span class="line">//xxx=&#123;&#125; 这种模式就是JS中的单例模式</span><br><span class="line"></span><br><span class="line">//=?基于数据类型基于两种不同的模式创建出来的值是不一样的</span><br><span class="line">//=&gt;基于字面量方式创建出来的值是基本类型值</span><br><span class="line">//=&gt;基于构造函数创建出来的值是引用类型</span><br><span class="line">//=&gt;num2和num1都是数字类的实例，它只是JS表达数字的方式之一,都可以使用数字类提供的属性和方法</span><br><span class="line">var num1=12;</span><br><span class="line">var num2=new Number(12);</span><br><span class="line">console.log(typeof num1);//=&gt;&quot;number&quot;;</span><br><span class="line">console.log(typeof num2);//=&gt;&quot;object&quot;;</span><br></pre></td></tr></table></figure></p>
+<p>构造函数中的一些细节问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/*  构造函数执行不写return，浏览器会默认返回创建的实例，但是如果我们写了return？</span><br><span class="line">    1、return的是一个基本值，返回的结果依然是类的实例，没有受到影响</span><br><span class="line">    2、return的是一个引用值，则会把默认的实例覆盖，返回这个引用值</span><br><span class="line">    =&gt;构造函数执行的时候。尽量减少return的使用，防止覆盖实例</span><br><span class="line">*/</span><br><span class="line">function fn()&#123;</span><br><span class="line">    var n = 10;</span><br><span class="line">    this.name=10;</span><br><span class="line">    return &#123;name:&apos;haha&apos;&#125;;//=&gt;着样return是结束代码执行的作用，并且不会覆盖返回的实例</span><br><span class="line">    console.log(1);</span><br><span class="line">&#125;</span><br><span class="line">var f = new Fn();//=&gt;new Fn&lt;=&gt;new Fn();也可以 创建一个实例 在不需要传递实参的时候，可以不加小括号</span><br><span class="line">console.log(f);</span><br><span class="line"></span><br><span class="line">//=&gt;instanceof:检测某一个实例是否隶属于这个类？</span><br><span class="line">console.log(f instanceof Fn);//=&gt;true</span><br><span class="line">console.log(f instanceof Object);//=&gt;true(万物皆对象)</span><br><span class="line"></span><br><span class="line">//=&gt;in：检测当前对象是否属存在某个属性(不管当前这个属性是否是对象的私有属性，只要有结果就是true)</span><br><span class="line">consoe.log(&apos;m&apos; in f);//=&gt;true</span><br><span class="line">consoe.log(&apos;n&apos; in f);//=&gt;false</span><br><span class="line">console.log(&apos;toString&apos; in f);//=&gt;true toString是它的公有属性</span><br><span class="line"></span><br><span class="line">//=&gt;hasOwnProperty 检测当前属性是否为对象的私有属性（不仅要有这个属性，而且必须还是私有的才可以）</span><br><span class="line">console.log(f.hasOwnProperty(&apos;m&apos;));//=&gt;true</span><br><span class="line">console.log(f.hasOwnProperty(&apos;n&apos;));//=&gt;false ,直接没有这个属性</span><br><span class="line">console.log(f.hasOwnProperty(&apos;toString&apos;));//=&gt;false toString是它的公有属性，不是私有属性</span><br></pre></td></tr></table></figure></p>
+<p>原型链和原型链的查找机制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*原型（prototype）、 原型链（_proto_）</span><br><span class="line">  [函数]</span><br><span class="line">    普通函数、类（所有的类：内置类、自己创建的类）</span><br><span class="line">   [对象]</span><br><span class="line">    普通对象、数组、正则、Math、arguments</span><br><span class="line">    实例是对象类型的（除了基本类型的字面量创建的值）</span><br><span class="line">    prototype的值也是对象类型的</span><br><span class="line">    函数也是对象类型的</span><br><span class="line">   1、所有的函数类型都天生自带一个属性：prototype(原型)，</span><br><span class="line">    这个属性的值是一个对象，浏览器会默认给它开辟一个堆内存</span><br><span class="line">   2、在浏览器给prototype开辟的堆内存当中，有一个天生自带的属性：</span><br><span class="line">    constructor，这个属性存储的值是当前函数本身</span><br><span class="line">   3、每一个对象都有一个__proto__的属性，这个属性指向当前实例</span><br><span class="line">   所属类的prototype（如果不能确定 它是谁的实例，都是Object的实例）</span><br><span class="line">   每一个类都把供实例调取的公共属性方法存储到自己的原型上</span><br><span class="line">   （原型prototype的作用就是存储一些公共的属性和方法，供它的实例调取使用）</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<p><strong><code>原型链</code></strong></p>
 <blockquote>
-<p>删除数组最后一项<br>参数：无参数，即输入什么删除的都是最后一项<br>返回值：被删除的那一项内容<br>原有数组改变了</p>
-</blockquote>
-<p><code>shift</code></p>
-<blockquote>
-<p>删除数组第一项<br>参数：无参数，即输入什么都是删除第一项<br>返回值：被删除的那一项内容<br>原有数组改变了，使用shift删除第一项后，后面每一项的索引都要向前进一位（导致后面项的索引发生改变）</p>
-</blockquote>
-<p><code>splice</code></p>
-<blockquote>
-<p>数组中内置方法：可以实现数组增加，修改，删除，本意是删除<br>实现删除：</p>
-<ul>
-<li>splice(n,m) ：从索引n开始删除m个（若没有参数m则从n删除到数组的末尾；n也不写则是一项也不删除 ）   返回值：被删除的内容（以一个新数组保存）   原有数组该变了</li>
-<li>splice(0)：清空数组</li>
-<li>splice()：一项都不删除，返回一个新的空数组</li>
-</ul>
-<p>实现修改</p>
-<ul>
-<li>splice(n,m,x)：在原有删除的基础上，把x代替删除的内容</li>
-</ul>
-<p>实现增加</p>
-<ul>
-<li>splice(n,0,x)：在修改的基础上，我们一项都不删除，把x插入到索引n的前面</li>
-<li>ary.splice(0,0,x)  : 向数组开头追加新的内容</li>
-<li>ary.splice(ary.length,0,x):向数组末尾追加新的内容</li>
-</ul>
-</blockquote>
-<p><code>数组的查询</code></p>
-<blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slice:数组查询</span><br></pre></td></tr></table></figure>
-<p><code>slice</code></p>
-<blockquote>
-<p>数组的查询<br>参数：slice(n,m)  从索引N开始找到索引M处（不包括M）<br>返回值：把找到的部分以一个新数组返回<br>原来的数组不变</p>
-<ul>
-<li>slice(n) 从索引N开始找到末尾</li>
-<li>slice(0)/slice()  数组克隆，克隆一份和原来数组一模一样的新数组</li>
-<li>slice支持负数索引，如果传递的索引为负数，浏览器解析的时候是按照 总长度+负数索引 来处理的</li>
-<li>思考题：若在slice中传的参数值是小数，非数据类型，值超越范围会是什么情况？<br>总结：若参数值是小数，其会向下取整；若是非数据类型，会转换为数据类型；超出范围得到的是空数组。</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<p><code>将两个数组进行拼接:concat</code></p>
-<blockquote>
-<p>concat:将多个数组拼接在一起</p>
-<ul>
-<li>参数：要拼接的内容，把内容放在原数组后面，可以是一个数组，也可以是一些数据值</li>
-<li>返回：拼接后的新数组</li>
-<li>原有数组不变</li>
-<li>concat()  什么都没有拼接，相当于把原有数组进行克隆</li>
-</ul>
-</blockquote>
-<p><code>把数组转化为字符串</code></p>
-<blockquote>
-<p>1、toString()</p>
-<ul>
-<li>实现把数组转化为字符串，转化后的字符串是以 逗号分隔每一项</li>
-<li>参数：无</li>
-<li>返回值：转换的字符串</li>
-<li>原有数组不变</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>2、 join：把数组按照指定的分隔符转换为字符串，和字符串中的split相对应</p>
-<ul>
-<li>参数：指定的连接符</li>
-<li>返回值：转化后的字符串</li>
-<li>原有数组不变</li>
-</ul>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//=&gt;已知数组中的每一项都是数字，想实现数组求和，我们如何实现？</span><br><span class="line">//=&gt;1、用循环求和</span><br><span class="line"></span><br><span class="line">//=&gt;2、利用join</span><br><span class="line">var total=eval(ary.join(&apos;+&apos;))</span><br><span class="line">//=&gt;eval:把字符串变为JS表达式执行</span><br></pre></td></tr></table></figure>
-<p><code>实现数组中每一项的排序和排列</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">*1、reverse:把数组中的每一项倒过来排列</span><br><span class="line">*	参数：无</span><br><span class="line">*	返回值:排列后的数组</span><br><span class="line">*	原有数组改变</span><br><span class="line">*</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">* 2、sort：实现数组的排序</span><br><span class="line">	* 参数：无或者回调函数</span><br><span class="line">	* 返回值：排序后的数组</span><br><span class="line">	* 原有数组改变</span><br><span class="line">	</span><br><span class="line">* 在不传递参数的情况下：可以给10以内的数字进行升序排列，但是超过10的就无法处理了（多位数只识别第一位）</span><br><span class="line">*  </span><br><span class="line">*  ary.sort(function(a,b))&#123;</span><br><span class="line">	* return a-b; //=&gt;升序</span><br><span class="line">	* return b-a;//=&gt;降序</span><br><span class="line">*  </span><br><span class="line">*  &#125;）</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
-<p><code>验证数组中是否包含某一项</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/* indexOf / lastIndexOf :获取当前项在数组中第一次或者最后一次出现位置的索引</span><br><span class="line">	* 数组中的这两个方法在IE6-8下不兼容</span><br><span class="line">	* 字符串中的这两个方法兼容所有的浏览器</span><br><span class="line"></span><br><span class="line">*	如果当前数组中没有这一项，返回的索引是-1，我们根据这一点可以验证数组中是否包含这一项</span><br><span class="line">*/	</span><br><span class="line">	if(ary.indexOf(12)&gt;-1)&#123;</span><br><span class="line">		//=&gt;数组中包含12</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//=&gt;不兼容下的验证数组中是否包含某一项的处理方式</span><br><span class="line">Arrary.prototype.myIndexOf=function myIndexOf(value)&#123;</span><br><span class="line">	var result=-1;</span><br><span class="line">	for(var i=0;i&lt;this.length;i++)&#123;</span><br><span class="line">		if(value===this[i])&#123;</span><br><span class="line">			result=i;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return result;</span><br><span class="line">&#125;</span><br><span class="line">ary.myIndexOf(12);</span><br></pre></td></tr></table></figure></p>
-<p><code>遍历数组中每一项的方法</code></p>
-<blockquote>
-<p>以下的方法在IE6-8下都不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">	forEach :遍历数组中的每一项</span><br><span class="line">*/</span><br><span class="line">ary.forEach(function(value,index)&#123;</span><br><span class="line">	//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">	map: 遍历数组中的每一项，在forEach的基础上，可以修改每一项的值</span><br><span class="line">*/</span><br><span class="line">ary.map(function(value,index)&#123;</span><br><span class="line">		//=&gt;数组中有多少项，当前回调函数执行多少次，每一次传递进来的value就是当前遍历数组这一项的值，index就是遍历这一项的索引</span><br><span class="line">		return xxx;//=&gt;return后面返回的结果就是把当前遍历的这一项修改为xxx</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>它是一种基于proto向上查找的机制。当我们操作实例的某个属性或者方法的时候，首先找到自己空间中私有的属性或者方法<br>找到了，则结束查找，使用自己私有的即可<br>没有找到，则基于proto向上查找所属类的prototype，如果找到，就用这个公有的，如果没找到，基于原型上的proto继续查找，一直找到Object.prototpe的原型为止，如果再没有，操作的属性或者方法不存在</p>
 </blockquote>
 
       
@@ -287,24 +212,13 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">面向对象编程</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -354,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/30/数组/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/27/面向对象思想/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -368,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/03/DOM/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/27/设计模式/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          DOM相关知识点
+          JS中的设计模式
         
       </div>
     </a>
   
   
-    <a href="/2019/04/30/正则基础/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">强大的正则</div>
+    <a href="/2019/05/21/跨域请求之jsonp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跨域请求之JSONP与CORS</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -418,7 +332,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/04/30/数组/",
+  id: "http://yoursite.com/2019/05/27/面向对象思想/",
   owner: 'perfermence',
   repo: 'perfermence.github.io',
   oauth: {
